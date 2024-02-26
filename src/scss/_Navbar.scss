@@ -13,24 +13,6 @@
         flex-flow: row wrap;
         justify-content: center;
         align-items: center;
-        .navbar-toggler {
-            background-color: map-get($colores, color-2);
-        }
-        .navbar-nav {
-            position: absolute;
-            z-index: 3;
-            background-image: linear-gradient(to bottom, #2c73d2, #237bd7, #1983dc, #0d8ae0, #0392e4, #0392e4, #0392e4, #0392e4, #0d8ae0, #1983dc, #237bd7, #2c73d2);
-            margin-left: 0px;
-            .nav-link {
-                color: map-get($colores, color-2);
-                padding: 10px 20px 10px 20px;
-                text-transform: uppercase;
-                text-align: center;
-                font-weight: bold;
-                &:hover {
-                    color: map-get($colores, color-4);
-                }
-            }
-        }
+        gap: 5px;
     }
 }
