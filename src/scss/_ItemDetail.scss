@@ -1,0 +1,15 @@
+/* ItemDetail */
+
+.ItemDetail {
+    margin: 30px;
+    height: 496px;
+    overflow-y: scroll;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: green;
+    img {
+        aspect-ratio: 1/1;
+    }
+}

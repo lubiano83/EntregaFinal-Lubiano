@@ -1,0 +1,15 @@
+/* Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#root {
+    background-color: #FFF7F0;
+    color: map-get($colores, color-1);
+    a {
+        text-decoration: none;
+    }
+}

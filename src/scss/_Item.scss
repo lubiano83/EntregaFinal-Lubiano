@@ -1,0 +1,21 @@
+/* Item */
+
+.producto {
+    width: 300px;
+    aspect-ratio: 1/1.6;
+    border: 2px solid map-get($colores, color-4);
+    border-radius: 20px;
+    margin: 0px 30px 30px 30px;
+    overflow: hidden;
+    box-shadow: 2px 2px 2px map-get($colores, color-4);
+    background-image: radial-gradient(circle, #009ce9, #0392e4, #1288df, #207ed9, #2c73d2);
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+
+    .boton {
+        position: relative;
+        left: 105px;
+        margin-bottom: 25px;
+    }   
+}

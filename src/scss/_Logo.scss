@@ -1,0 +1,9 @@
+/* Logo */
+
+.logo {
+    margin-bottom: -5px;
+    .logo__texto {
+        color: map-get($colores, color-2);
+        text-decoration: none;
+    }
+}

@@ -1,0 +1,12 @@
+/* ItemListContainer */
+
+.main {
+    background-color: map-get($colores, color-2);
+    width: 100%;
+    .titulo__productos {
+        text-align: center;
+        .categorias {
+           padding: 30px;
+        }
+    }
+}

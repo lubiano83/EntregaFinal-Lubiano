@@ -1,0 +1,13 @@
+/* TotalPagar */
+
+.carrito__total {
+    .total {
+        color: map-get($colores, color-2);
+        text-align: center;
+    }
+    .boton {
+        margin: 10px 30px 30px 30px;
+        text-align: center;
+        line-height: 1.8;
+    }
+}

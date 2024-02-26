@@ -1,0 +1,11 @@
+/* ItemDetailContainer */
+
+.ItemDetailContainer {
+    width: calc(100vw - 60px);
+    height: 556px;
+    background-image: radial-gradient(circle, #009ce9, #0392e4, #1288df, #207ed9, #2c73d2);
+    border: 1px solid map-get($colores, color-4);
+    border-radius: 20px;
+    margin: 30px;
+    overflow: hidden;
+}
