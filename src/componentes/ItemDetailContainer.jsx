@@ -1,13 +1,12 @@
 /* ItemDetailContainer */
 
-import ItemDetail from "./ItemDetail"
-
+import ItemDetail from "./ItemDetail";
+ 
 const ItemDetailContainer = () => {
+
   return (
     <section className="ItemDetailContainer">
-       <ItemDetail/>
+       <ItemDetail />
     </section>
   )
-}
-
-export default ItemDetailContainer
+}; export default ItemDetailContainer;
