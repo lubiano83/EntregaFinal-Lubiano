@@ -1,9 +1,9 @@
 /* Cards */
 
-const Cards = ({img, categoria, marca, descripcion, precio, stock}) => {
+const Cards = ({img, categoria, marca, precio, stock}) => {
   return (
     <div className="cards">
-        <img src={img} alt={descripcion} className="cards__foto" />
+        <img src={img} alt={categoria} className="cards__foto" />
         <ul className="cards__texto">
             <li>Producto: {categoria}, {marca}.</li>
             <li>Precio: {precio}</li>

@@ -25,29 +25,4 @@
             }
         }
     }
-    .contenedor__detalle {
-        overflow-y: scroll;
-        height: calc(100vh - 280px);
-        
-        .ItemDetail__foto {
-            width: 100%;
-            aspect-ratio: 1/1;
-            background-color: white;
-            margin-top: 10px;
-        }
-        .ItemDetail__texto {
-            color: map-get($colores, color-2);
-            display: flex;
-            flex-flow: column wrap;
-            justify-content: center;
-            align-items: flex-start;
-            width: 100%;
-            margin-top: 20px;
-            .descripcion {
-                height: 500px;
-                height: calc(100vh - 760px);
-                overflow-y: scroll;
-            }
-        }
-    }
 }
