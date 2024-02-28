@@ -1,0 +1,15 @@
+/* Mobile */
+
+@mixin mobile ($min, $max) {
+    @media screen and (min-width: $min) and (max-width: $max) {
+    
+        @content;
+    }
+}
+
+/* 320px & 469px */
+@include mobile(320px, 469px) {
+    .contenedor__link {
+        flex-flow: row wrap;
+    }
+}

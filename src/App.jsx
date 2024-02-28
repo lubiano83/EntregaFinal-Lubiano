@@ -4,6 +4,7 @@ import {useState} from "react";
 import ItemListContainer from "./componentes/ItemListContainer";
 import Navbar from "./componentes/Navbar";
 import ItemDetailContainer from "./componentes/ItemDetailContainer";
+import Footer from "./componentes/Footer";
 
 function App() {
   const [categoriaTitulo, setCategoriaTitulo] = useState("Todos");
@@ -17,6 +18,7 @@ function App() {
       <Navbar categoriaDropdown={HANDLE_CATEGORIA}/>
       <ItemListContainer greeting={`Categoria: ${categoriaTitulo}`} />
       <ItemDetailContainer />
+      <Footer/>
     </div>
   );
 } export default App;

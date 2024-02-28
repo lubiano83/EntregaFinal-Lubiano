@@ -1,9 +1,10 @@
 /* App */
 
 .app {
+    min-height: 100vh;
     display: flex;
     flex-flow: column wrap;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    background-color: red;
+    background-color: green;
 }

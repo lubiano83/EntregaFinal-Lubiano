@@ -5,5 +5,8 @@
     .logo__texto {
         color: map-get($colores, color-2);
         text-decoration: none;
+        &:hover {
+            color: map-get($colores, color-4);
+        }
     }
 }
