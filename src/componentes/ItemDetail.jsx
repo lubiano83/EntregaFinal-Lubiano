@@ -21,18 +21,20 @@ const ItemDetail = () => {
 
   return (
     <article className="ItemDetail">
-      <img src="./src/img/pala-nox.webp" alt="" className="ItemDetail__foto"/>
-      <div className="contenedor">
+      <div className="contenedor__cruz">
         <Cruz handleClick={TOGGLE_CRUZ}/>
+      </div>
+      <div className="contenedor__detalle">
+        <img src="./src/img/pala-nox.webp" alt="" className="ItemDetail__foto"/>
         <div className="ItemDetail__texto">
-          <h2>Categoria:</h2>
-          <h3>Marca:</h3>
+          <h4>Categoria:</h4>
+          <h4>Marca:</h4>
           <h4>Precio:</h4>
           <h4>Stock:</h4>
-          <h5>Descripción:</h5>
+          <h4 className="descripcion">Descripción:</h4>
         </div>
-        <ItemCount inicial={1} stock={10} agregar={(cantidad) => console.log(`Cantidad Agregada: `, cantidad)} />
       </div>
+      <ItemCount inicial={1} stock={10} agregar={(cantidad) => console.log(`Cantidad Agregada: `, cantidad)} />
     </article>
   )
 }; export default ItemDetail;

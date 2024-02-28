@@ -9,16 +9,14 @@
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
-    background-color: map-get($colores, color-2);
+    background-image: linear-gradient(to bottom, #2c73d2, #237bd7, #1983dc, #0d8ae0, #0392e4, #0392e4, #0392e4, #0392e4, #0d8ae0, #1983dc, #237bd7, #2c73d2);
     position: fixed;
-    z-index: 4;
+    z-index: 2;
     margin-top: 62px;
-    height: calc(100vh - 122px);
-    width: calc(100vw - 60px);
-    top: 32px;
-    border-left: 1px solid map-get($colores, color-4);
+    height: calc(100vh - 62px);
+    width: 360px;
+    top: 0;
+    left: 0;
+    border-right: 1px solid map-get($colores, color-4);
     border-bottom: 1px solid map-get($colores, color-4);
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 2px 2px 2px map-get($colores, color-4);
 }
