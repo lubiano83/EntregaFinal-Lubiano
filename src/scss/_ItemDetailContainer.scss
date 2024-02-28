@@ -1,11 +1,24 @@
 /* ItemDetailContainer */
 
+.mostrar-detalle {
+    display: none !important;
+}
+
 .ItemDetailContainer {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: map-get($colores, color-2);
+    position: fixed;
+    z-index: 4;
+    margin-top: 62px;
+    height: calc(100vh - 122px);
     width: calc(100vw - 60px);
-    height: 556px;
-    background-image: radial-gradient(circle, #009ce9, #0392e4, #1288df, #207ed9, #2c73d2);
-    border: 1px solid map-get($colores, color-4);
+    top: 32px;
+    border-left: 1px solid map-get($colores, color-4);
+    border-bottom: 1px solid map-get($colores, color-4);
     border-radius: 20px;
-    margin: 30px;
     overflow: hidden;
+    box-shadow: 2px 2px 2px map-get($colores, color-4);
 }

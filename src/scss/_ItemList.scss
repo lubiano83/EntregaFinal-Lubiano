@@ -4,7 +4,8 @@
     width: 100%;
     display: flex;
     flex-flow: row wrap;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     background-color: yellow;
+    overflow-y: scroll;
 }

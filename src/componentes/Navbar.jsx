@@ -6,12 +6,12 @@ import CartWidget from "./CartWidget";
 import Carrito from "./Carrito";
 import Dropdown from "./Dropdown";
 
-const Navbar = ({ categoriaTitulo }) => {
+const Navbar = ({categoriaDropdown}) => {
   const [categoria, setCategoria] = useState("Todos");
 
   const MANEJADOR_CATEGORIA = (categoria) => {
     setCategoria(categoria);
-    categoriaTitulo(categoria);
+    categoriaDropdown(categoria);
   };
 
   useEffect(() => {

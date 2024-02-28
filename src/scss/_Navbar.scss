@@ -8,6 +8,9 @@
     align-items: center;
     background-image: linear-gradient(to right, #2c73d2, #237bd7, #1983dc, #0d8ae0, #0392e4, #0392e4, #0392e4, #0392e4, #0d8ae0, #1983dc, #237bd7, #2c73d2);
     border: 1px solid map-get($colores, color-4);
+    position: fixed;
+    top: 0;
+    z-index: 3;
     .contenedor_navbar-logo {
         display: flex;
         flex-flow: row wrap;
