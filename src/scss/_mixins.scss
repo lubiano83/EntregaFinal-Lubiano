@@ -8,6 +8,7 @@
     width: 90px;
     text-align: $valor-text-align;
     border-radius: 10px;
+    box-shadow: 2px 2px 2px map-get($colores, color-4);
 }
 
 .boton {

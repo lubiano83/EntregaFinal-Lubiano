@@ -9,7 +9,6 @@
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(to bottom, #2c73d2, #237bd7, #1983dc, #0d8ae0, #0392e4, #0392e4, #0392e4, #0392e4, #0d8ae0, #1983dc, #237bd7, #2c73d2);
     position: fixed;
     z-index: 2;
     margin-top: 62px;
@@ -19,4 +18,5 @@
     left: 0;
     border-right: 1px solid map-get($colores, color-4);
     border-bottom: 1px solid map-get($colores, color-4);
+    background-image: linear-gradient(to bottom, #2c73d2, #237bd7, #1983dc, #0d8ae0, #0392e4, #0392e4, #0392e4, #0392e4, #0d8ae0, #1983dc, #237bd7, #2c73d2);
 }

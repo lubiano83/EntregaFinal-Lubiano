@@ -6,8 +6,8 @@ import {getProductsById} from "../asyncMock";
  
 const ItemDetailContainer = () => {
 
-  const [producto, setProducto] = useState(null);
-  
+  const [producto, setProducto] = useState();
+
   useEffect(() => {
     getProductsById("3")
       .then(respuesta => {

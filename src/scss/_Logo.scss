@@ -1,10 +1,11 @@
 /* Logo */
 
 .logo {
-    margin-bottom: -5px;
+    margin-bottom: -8px;
     .logo__texto {
         color: map-get($colores, color-2);
         text-decoration: none;
+        text-shadow: 2px 2px 2px map-get($colores, color-4);
         &:hover {
             color: map-get($colores, color-4);
         }

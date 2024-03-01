@@ -7,7 +7,7 @@ import CardDetalle from "./CardDetalle";
 
 const ItemDetail = ({id, img, categoria, marca, precio, stock, descripcion}) => {
 
-  const [mostrarDetalle, setMostrarDetalle] = useState(false);
+    const [mostrarDetalle, setMostrarDetalle] = useState(false);
 
     const TOGGLE_CRUZ = () => {
         setMostrarDetalle(!mostrarDetalle);

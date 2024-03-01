@@ -1,5 +1,7 @@
 /* Dropdown */
 
+import {Link} from "react-router-dom";
+
 const Dropdown = ({handleClick}) => {
   return (
     <div className="dropdown">
@@ -9,12 +11,12 @@ const Dropdown = ({handleClick}) => {
             </svg>
         </button>
         <ul className="dropdown-menu">
-            <li><a className="dropdown-item" href="#productos__contenedor" onClick={() => handleClick("Todos")}>todos</a></li>
-            <li><a className="dropdown-item" href="#productos__contenedor" onClick={() => handleClick("Pelotas")}>pelotas</a></li>
-            <li><a className="dropdown-item" href="#productos__contenedor" onClick={() => handleClick("Grips")}>grips</a></li>
-            <li><a className="dropdown-item" href="#productos__contenedor" onClick={() => handleClick("Calcetines")}>calcetines</a></li>
-            <li><a className="dropdown-item" href="#productos__contenedor" onClick={() => handleClick("Protectores")}>protectores</a></li>
-            <li><a className="dropdown-item" href="#productos__contenedor" onClick={() => handleClick("Palas")}>palas</a></li>
+            <Link className="dropdown-item" to={"/"} onClick={() => handleClick("Todos")}>todos</Link>
+            <Link className="dropdown-item" to={"/categoria/Pelotas"} onClick={() => handleClick("Pelotas")}>pelotas</Link>
+            <Link className="dropdown-item" to={"/categoria/Grips"} onClick={() => handleClick("Grips")}>grips</Link>
+            <Link className="dropdown-item" to={"/categoria/Calcetines"} onClick={() => handleClick("Calcetines")}>calcetines</Link>
+            <Link className="dropdown-item" to={"/categoria/Protectores"} onClick={() => handleClick("Protectores")}>protectores</Link>
+            <Link className="dropdown-item" to={"/categoria/Palas"} onClick={() => handleClick("Palas")}>palas</Link>
         </ul>
     </div>
   )

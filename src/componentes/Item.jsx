@@ -4,7 +4,7 @@ import Boton from "./Boton";
 import Cards from "./Cards";
 import { useState, useEffect } from "react";
 
-const Item = ({marca, img, categoria, descripcion, precio, stock }) => {
+const Item = ({id, marca, img, categoria, descripcion, precio, stock }) => {
 
     const [mostrarDetalle, setMostrarDetalle] = useState(false);
 
@@ -22,7 +22,7 @@ const Item = ({marca, img, categoria, descripcion, precio, stock }) => {
     return (
         <article className="producto">
             <Cards img={img} marca={marca} categoria={categoria} descripcion={descripcion} precio={precio} stock={stock}/>
-            <Boton label="Detalle" handleClick={TOGGLE_DETALLE}/>
+            <Boton id={id} label="Detalle" handleClick={TOGGLE_DETALLE}/>
         </article>
     )
   }; export default Item;

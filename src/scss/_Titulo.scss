@@ -1,8 +1,14 @@
 /* Titulo */
 
 .titulo__productos {
-    margin-top: 62px;
+    margin-top: 72px;
+    width: 100%;
     text-align: center;
+    color: map-get($colores, color-1);
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-end;
+    align-items: center;
     .categorias {
        padding: 30px;
     }   

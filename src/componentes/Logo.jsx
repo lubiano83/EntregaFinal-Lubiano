@@ -1,9 +1,11 @@
 /* Logo */
 
+import {Link} from "react-router-dom";
+
 const Logo = () => {
   return (
-    <a href="./src/index.html" className="logo">
+    <Link to="/" className="logo">
         <h1 className="logo__texto">Padel Store</h1>
-    </a>
+    </Link>
   )
 }; export default Logo
