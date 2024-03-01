@@ -21,9 +21,9 @@ function App() {
         <Routes>
           <Route path="/" element={<ItemListContainer greeting={`Categoria: ${categoriaTitulo}`} />}/>
           <Route path="/categoria/:categoryId" element={<ItemListContainer greeting={`Categoria: ${categoriaTitulo}`} />} />
+          <Route path="/detalle/:productId" element={ <ItemDetailContainer/> } />
           <Route path="*" element={<h1> 404 NOT FOUND </h1>}/>
         </Routes>
-        <ItemDetailContainer/>
         <Footer/>
       </div>
     </BrowserRouter>

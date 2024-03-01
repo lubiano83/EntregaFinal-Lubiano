@@ -1,22 +1,9 @@
 /* ItemDetailContainer */
 
-.mostrar-detalle {
-    display: none !important;
-}
-
 .ItemDetailContainer {
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
-    position: fixed;
-    z-index: 2;
-    margin-top: 62px;
-    height: calc(100vh - 62px);
-    width: 360px;
-    top: 0;
-    left: 0;
-    border-right: 1px solid map-get($colores, color-4);
-    border-bottom: 1px solid map-get($colores, color-4);
-    background-image: linear-gradient(to bottom, #2c73d2, #237bd7, #1983dc, #0d8ae0, #0392e4, #0392e4, #0392e4, #0392e4, #0d8ae0, #1983dc, #237bd7, #2c73d2);
+    background-color: map-get($colores, color-2);
 }

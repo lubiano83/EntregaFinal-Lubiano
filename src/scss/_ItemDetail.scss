@@ -1,29 +1,13 @@
 /* ItemDetail */
 
 .ItemDetail {
-    width: 300px;
+    background-color: map-get($colores, color-2);
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
-    height: 100%;
     display: flex;
     flex-flow: column wrap;
     justify-content: space-between;
     align-items: center;
-    
-    .contenedor__cruz {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        .svg {
-            color: map-get($colores, color-2);
-            height: 50px;
-            width: 50px;
-            margin: 10px 0px 0px 0px;
-            &:active {
-                color: map-get($colores, color-4);
-            }
-        }
-    }
 }

@@ -1,11 +1,13 @@
 /* ItemCount */
 
 .contador {
-    background-color: transparent;
+    background-color: map-get($colores, color-2);
     display: flex;
     flex-flow: column  wrap;
     justify-content: center;
     align-items: center;
+    gap: 20px;
+    margin: 30px;
     .controles {
         display: flex;
         flex-flow: row wrap;
@@ -15,11 +17,11 @@
         .svg {
             width: 40px;
             height: 40px;
-            color: map-get($colores, color-4);
-            margin-top: 20px;
-            border: 1px solid map-get($colores, color-4);
+            color: map-get($colores, color-2);
+            border: 1px solid map-get($colores, color-2);
             border-radius: 10px;
-            background-color: map-get($colores, color-2);
+            background-color: map-get($colores, color-1);
+            box-shadow: 2px 2px 2px map-get($colores, color-4);
             &:active {
                 color: map-get($colores, color-2);
                 background-color: map-get($colores, color-4);
@@ -29,11 +31,17 @@
         .numero {
             text-align: center;
             font-size: 26px;
-            margin-bottom: -20px;
-            color: map-get($colores, color-2);
+            color: map-get($colores, color-4);
         }
     }
+    .botones {
+        text-align: center;
+        width: 250px;
+    }
     .boton {
-        margin: 20px 30px 30px 30px;
+        background-color: map-get($colores, color-1);
+        color: map-get($colores, color-2);
+        border: 1px solid map-get($colores, color-2);
+        margin: 10px;
     }
 }
