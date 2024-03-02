@@ -1,28 +1,34 @@
 /* CardDetalle */
 
-.contenedor__detalle {
-    background-color: map-get($colores, color-2);
+.ItemDetail {
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
-    margin-top: 61px;
-    
-    .ItemDetail__foto {
-        width: 300px;
-        aspect-ratio: 1/1;
-        background-color: white;
-        margin-top: 30px;
-    }
-    .ItemDetail__texto {
-        color: map-get($colores, color-4);
-        width: 40%;
-        min-width: 300px;
+    .ItemDetail__contenedor {
+        margin: 0px 30px 30px 30px;
         display: flex;
-        flex-flow: column wrap;
+        flex-flow: row wrap;
         justify-content: center;
-        align-items: flex-start;
-        margin-top: 20px;
+        align-items: center;
+        .contenedor__foto {
+            width: 300px;
+            aspect-ratio: 1/1;
+            background-color: white;
+        }
+        .contenedor__texto {
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: center;
+            align-items: flex-start;
+            h4 {
+                color: map-get($colores, color-4);
+            }
+        }
+    }
+    .contenedor__descripcion {
+        width: 22%;
         text-align: justify;
+        color: map-get($colores, color-4);
     }
 }
