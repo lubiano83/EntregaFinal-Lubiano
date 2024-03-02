@@ -6,7 +6,7 @@
     justify-content: center;
     align-items: center;
     .ItemDetail__contenedor {
-        margin: 0px 30px 30px 30px;
+        margin: -20px 30px 30px 30px;
         display: flex;
         flex-flow: row wrap;
         justify-content: center;
@@ -27,8 +27,9 @@
         }
     }
     .contenedor__descripcion {
-        width: 22%;
+        width: 40%;
         text-align: justify;
         color: map-get($colores, color-4);
+        min-width: 300px;
     }
 }
