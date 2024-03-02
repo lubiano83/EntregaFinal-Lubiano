@@ -1,7 +1,6 @@
 /* CardDetalle */
 
 .contenedor__detalle {
-    overflow-y: scroll;
     background-color: map-get($colores, color-2);
     display: flex;
     flex-flow: column wrap;

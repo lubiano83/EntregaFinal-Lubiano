@@ -1,6 +1,7 @@
 /* CardDetalle */
 
 const CardDetalle = ({img, id, categoria, marca, precio, stock, descripcion}) => {
+
   return (
     <div className="contenedor__detalle">
         <img src={img} alt={categoria} className="ItemDetail__foto"/>
