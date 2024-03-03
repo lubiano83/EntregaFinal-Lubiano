@@ -46,6 +46,24 @@ const PRODUCTOS = [
       stock: 10,
       precio: 7990,
     },
+    {
+      id: "6",
+      img: "./src/img/grip-wilson-rosado.webp",
+      categoria: "Grips",
+      marca: "Wilson",
+      descripcion: "Rosado, Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed reprehenderit placeat dolorum dicta provident quasi minima quibusdam. Quod repellendus error reiciendis eligendi odit culpa assumenda ratione vitae, recusandae quidem nulla.",
+      stock: 100,
+      precio: 2990,
+    },
+    {
+      id: "7",
+      img: "./src/img/protector-nox-axul.webp",
+      categoria: "Protectores",
+      marca: "Nox",
+      descripcion: "Protector de Pala Ventus Verde-Negro, Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed reprehenderit placeat dolorum dicta provident quasi minima quibusdam. Quod repellendus error reiciendis eligendi odit culpa assumenda ratione vitae, recusandae quidem nulla.",
+      stock: 10,
+      precio: 7990,
+    },
 ];
   
 export const getProducts = () => {
