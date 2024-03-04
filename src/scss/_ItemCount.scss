@@ -1,17 +1,12 @@
 /* ItemCount */
 
 .contador {
-    background-image: linear-gradient(to right, #2c73d2, #237bd7, #1983dc, #0d8ae0, #0392e4, #0392e4, #0392e4, #0392e4, #0d8ae0, #1983dc, #237bd7, #2c73d2);
     display: flex;
     flex-flow: column  wrap;
     justify-content: center;
     align-items: center;
     gap: 20px;
     margin: 30px;
-    border: 1px solid map-get($colores, color-4);
-    border-radius: 15px;
-    padding: 20px 0px 10px 0px;
-    border-radius: 15px;
     .controles {
         display: flex;
         flex-flow: row wrap;
@@ -21,21 +16,19 @@
         .svg {
             width: 40px;
             height: 40px;
-            color: map-get($colores, color-4);
-            border: 1px solid map-get($colores, color-4);
+            color: map-get($colores, color-2);
+            border: 1px solid map-get($colores, color-2);
             border-radius: 10px;
-            background-color: map-get($colores, color-2);
+            background-image: linear-gradient(to right, #2c73d2, #237bd7, #1983dc, #0d8ae0, #0392e4, #0392e4, #0392e4, #0392e4, #0d8ae0, #1983dc, #237bd7, #2c73d2);
             box-shadow: 2px 2px 2px map-get($colores, color-4);
             &:active {
-                color: map-get($colores, color-2);
-                background-color: map-get($colores, color-4);
-                border: 1px solid map-get($colores, color-2);
+                scale: 1.1;
             }    
         }
         .numero {
             text-align: center;
             font-size: 26px;
-            color: map-get($colores, color-2);
+            color: map-get($colores, color-4);
         }
     }
     .botones {
@@ -44,5 +37,11 @@
     }
     .boton {
         margin: 10px;
+        color: map-get($colores, color-2);
+        border: 1px solid map-get($colores, color-2);
+        background-image: linear-gradient(to right, #2c73d2, #237bd7, #1983dc, #0d8ae0, #0392e4, #0392e4, #0392e4, #0392e4, #0d8ae0, #1983dc, #237bd7, #2c73d2);
+        &:active {
+            scale: 1.1;
+        }    
     }
 }
