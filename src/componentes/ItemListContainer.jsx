@@ -24,9 +24,9 @@ const ItemListContainer = ({ greeting }) => {
     console.log(productos); // Verifica si los productos se cargan correctamente.
 
     return (
-        <main className="main">
+        <main id="ItemListContainer">
             <Titulo label={greeting}/>
             <ItemList productos={productos} />
         </main>
     )
-}; export default ItemListContainer
+}; export default ItemListContainer;

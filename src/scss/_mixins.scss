@@ -9,9 +9,10 @@
     text-align: $valor-text-align;
     border-radius: 10px;
     box-shadow: 2px 2px 2px map-get($colores, color-4);
+    font-weight: bold;
 }
 
-.boton {
+#Boton {
     @include botones(map-get($colores, color-4), map-get($colores, color-2), center, map-get($colores, color-4));
     &:active {
         background-color: map-get($colores, color-4);

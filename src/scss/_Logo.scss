@@ -1,8 +1,8 @@
 /* Logo */
 
-.logo {
+#Logo {
     margin-bottom: -8px;
-    .logo__texto {
+    .Logo__texto {
         color: map-get($colores, color-2);
         text-decoration: none;
         text-shadow: 2px 2px 2px map-get($colores, color-4);

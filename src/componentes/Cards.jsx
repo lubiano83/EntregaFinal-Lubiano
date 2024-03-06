@@ -2,7 +2,7 @@
 
 const Cards = ({img, categoria, marca, precio, stock}) => {
   return (
-    <div className="cards">
+    <div id="Cards">
         <img src={img} alt={categoria} className="cards__foto" />
         <ul className="cards__texto">
             <li>Producto: {categoria}, {marca}.</li>

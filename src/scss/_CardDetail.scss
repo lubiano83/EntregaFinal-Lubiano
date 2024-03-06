@@ -1,12 +1,12 @@
-/* CardDetalle */
+/* CardDetail */
 
-.ItemDetail {
+#CardDetail {
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
-    .ItemDetail__contenedor {
-        margin: -20px 30px 30px 30px;
+    .CardDetail__contenedor {
+        margin: -10px 30px 0px 30px;
         display: flex;
         flex-flow: row wrap;
         justify-content: center;
@@ -21,8 +21,10 @@
             flex-flow: column wrap;
             justify-content: center;
             align-items: flex-start;
+            margin: 30px 30px 30px 30px;
             h4 {
                 color: map-get($colores, color-4);
+                line-height: 1.8;
             }
         }
     }
@@ -33,3 +35,4 @@
         min-width: 300px;
     }
 }
+

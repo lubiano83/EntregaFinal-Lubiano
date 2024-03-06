@@ -6,7 +6,7 @@ import Links from "./Links";
 
 const Footer = () => {
   return (
-    <footer className="footer">
+    <footer id="Footer">
         <Formulario Reset="Reset" Enviar="Enviar"/>
         <Links/>
         <Horario/>

@@ -4,7 +4,7 @@ import Boton from "./Boton"
 
 const Formulario = ({Reset, Enviar}) => {
   return (
-    <div className="contenedor__formulario" id="formulario">
+    <div id="Formulario">
         <div className="mb-3">
             <label htmlFor="exampleFormControlInput1" className="form-label">
                 <h4>Email</h4>

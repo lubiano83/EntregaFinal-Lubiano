@@ -1,8 +1,8 @@
 /* Item */
 
-.producto {
+#Item {
     width: 300px;
-    aspect-ratio: 1/1.6;
+    aspect-ratio: 1/1.7;
     border: 2px solid map-get($colores, color-4);
     border-radius: 20px;
     margin: 0px 30px 30px 30px;
@@ -12,7 +12,7 @@
     flex-flow: column wrap;
     justify-content: space-between;
     background-image: linear-gradient(to right, #2c73d2, #237bd7, #1983dc, #0d8ae0, #0392e4, #0392e4, #0392e4, #0392e4, #0d8ae0, #1983dc, #237bd7, #2c73d2);
-    .boton {
+    #Boton {
         position: relative;
         left: 105px;
         margin-bottom: 25px;

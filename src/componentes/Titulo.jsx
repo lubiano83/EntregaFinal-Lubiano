@@ -2,8 +2,8 @@
 
 const Titulo = ({label}) => {
   return (
-    <div className="titulo__productos">
-      <h2 className="categorias">{label}</h2>
+    <div id="Titulo">
+      <h2 className="Titulo__categorias">{label}</h2>
     </div>
   )
 }; export default Titulo

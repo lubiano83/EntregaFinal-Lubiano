@@ -11,7 +11,7 @@ const CartWidget = ({numerito}) => {
     };
 
     useEffect(() => {
-        const BOTON_TOGGLE = document.getElementById("carrito");
+        const BOTON_TOGGLE = document.getElementById("Carrito");
         if (mostrarCarrito) {
           BOTON_TOGGLE.classList.add("mostrar-carrito");
         } else {
@@ -22,7 +22,7 @@ const CartWidget = ({numerito}) => {
     // numerito = 99;
 
     return (
-        <button onClick={TOGGLE_CARRITO} className="rounded-circle"  id="toggleCarrito" alt="pelota padel store">
+        <button onClick={TOGGLE_CARRITO} className="rounded-circle"  id="CartWidget">
             <span className="numerito">{numerito}</span>
         </button>
     )

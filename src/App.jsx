@@ -6,6 +6,7 @@ import Navbar from "./componentes/Navbar";
 import ItemDetailContainer from "./componentes/ItemDetailContainer";
 import Footer from "./componentes/Footer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Carrito from "./componentes/Carrito";
 
 function App() {
   const [categoriaTitulo, setCategoriaTitulo] = useState("Todos");
@@ -16,14 +17,15 @@ function App() {
 
   return (
     <BrowserRouter>
-      <div className="app">
+      <div id="App">
         <Navbar categoriaDropdown={HANDLE_CATEGORIA}/>
         <Routes>
-          <Route path="/" element={<ItemListContainer greeting={`Categoria: ${categoriaTitulo}`} />}/>
-          <Route path="/categoria/:categoryId" element={<ItemListContainer greeting={`Categoria: ${categoriaTitulo}`} />} />
-          <Route path="/detalle/:productId" element={ <ItemDetailContainer/> } />
-          <Route path="*" element={<h1> 404 NOT FOUND </h1>}/>
+          <Route path="/" element={ <ItemListContainer greeting={`Categoria: ${categoriaTitulo}`} /> } />
+          <Route path="/categoria/:categoryId" element={ <ItemListContainer greeting={`Categoria: ${categoriaTitulo}`} /> } />
+          <Route path="/detalle/:productId" element={ <ItemDetailContainer /> } />
+          <Route path="*" element={ <main><h1>¡404 Error, Not Found!</h1></main> } />
         </Routes>
+        <Carrito/> 
         <Footer/>
       </div>
     </BrowserRouter>

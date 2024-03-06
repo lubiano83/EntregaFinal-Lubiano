@@ -4,13 +4,13 @@
     display: none !important;
 }
 
-.carrito {
+#Carrito {
     display: flex;
     flex-flow: column wrap;
     justify-content: space-between;
     align-items: center;
     position: fixed;
-    z-index: 3;
+    z-index: 4;
     margin-top: 62px;
     height: calc(100vh - 62px);
     width: 360px;

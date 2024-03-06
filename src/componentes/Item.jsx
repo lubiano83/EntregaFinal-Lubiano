@@ -7,7 +7,7 @@ import {Link} from "react-router-dom";
 const Item = ({id, marca, img, categoria, descripcion, precio, stock }) => {
   
     return (
-        <article className="producto">
+        <article id="Item">
             <Cards img={img} marca={marca} categoria={categoria} descripcion={descripcion} precio={precio} stock={stock}/>
             <Link to={`/detalle/${id}`}>
               <Boton id={id} label="Detalle"/>

@@ -21,7 +21,7 @@ const ItemDetailContainer = () => {
   }, [productId]);
 
   return (
-    <section className="ItemDetailContainer mostrar-detalle" id="detalle">
+    <section id="ItemDetailContainer">
        <ItemDetail {...producto} />
     </section>
   )

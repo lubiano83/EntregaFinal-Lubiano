@@ -1,10 +1,10 @@
-/* CardDetalle */
+/* CardDetail */
 
-const CardDetalle = ({img, id, categoria, marca, precio, stock, descripcion}) => {
+const CardDetail = ({img, id, categoria, marca, precio, stock, descripcion}) => {
 
   return (
-    <div className="ItemDetail">
-      <div className="ItemDetail__contenedor">
+    <div id="CardDetail">
+      <div className="CardDetail__contenedor">
         <img src={img} alt={categoria} className="contenedor__foto"/> 
         <div className="contenedor__texto">
           <h4>Id: {id}</h4>
@@ -14,7 +14,7 @@ const CardDetalle = ({img, id, categoria, marca, precio, stock, descripcion}) =>
           <h4>Stock: {stock}</h4>
         </div>
       </div>
-        <h4 className="contenedor__descripcion">Descripción: {descripcion}</h4>
+      <h4 className="contenedor__descripcion">Descripción: {descripcion}</h4>
     </div>
   )
-}; export default CardDetalle;
+}; export default CardDetail;

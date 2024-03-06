@@ -64,6 +64,15 @@ const PRODUCTOS = [
       stock: 10,
       precio: 7990,
     },
+    {
+      id: "8",
+      img: "./src/img/calcetin-nox-negro-blanco.webp",
+      categoria: "Calcetines",
+      marca: "Nox",
+      descripcion: "Negro-Blanco, Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed reprehenderit placeat dolorum dicta provident quasi minima quibusdam. Quod repellendus error reiciendis eligendi odit culpa assumenda ratione vitae, recusandae quidem nulla.",
+      stock: 20,
+      precio: 9990,
+    }
 ];
   
 export const getProducts = () => {

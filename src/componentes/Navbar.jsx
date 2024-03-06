@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 import Logo from "./Logo";
 import CartWidget from "./CartWidget";
-import Carrito from "./Carrito";
 import Dropdown from "./Dropdown";
 
 const Navbar = ({categoriaDropdown}) => {
@@ -19,13 +18,12 @@ const Navbar = ({categoriaDropdown}) => {
   }, [categoria]);
 
   return (
-    <header className="header">
-      <div className="contenedor_navbar-logo">
+    <header id="Navbar">
+      <div className="header__contenedor">
         <Dropdown handleClick={MANEJADOR_CATEGORIA} />
         <Logo />
       </div>
       <CartWidget />
-      <Carrito />
     </header>
   );
 }; export default Navbar;

@@ -1,15 +1,13 @@
 /* Titulo */
 
-.titulo__productos {
-    margin-top: 61px;
-    width: 100%;
+#Titulo {
     text-align: center;
     color: map-get($colores, color-4);
     display: flex;
     flex-flow: column wrap;
     justify-content: flex-end;
     align-items: center;
-    .categorias {
+    .Titulo__categorias {
        padding: 30px;
     }   
 }

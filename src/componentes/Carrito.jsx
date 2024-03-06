@@ -5,12 +5,11 @@ import TotalPagar from "./TotalPagar";
 const Carrito = () => {
     
     return (
-        <aside className="carrito mostrar-carrito" id="carrito">
+        <section className="mostrar-carrito" id="Carrito">
             <section id="carritoContenedor">
                 {/* <!-- Contenido del carrito --> */}
             </section>
             <TotalPagar />
-        </aside>
-        
+        </section>
     );
-}; export default Carrito
+}; export default Carrito;
