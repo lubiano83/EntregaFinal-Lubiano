@@ -11,12 +11,12 @@ const Dropdown = ({handleClick}) => {
             </svg>
         </button>
         <ul className="dropdown-menu">
-            <Link className="dropdown-item" to={"/"} onClick={() => handleClick("Todos")}>todos</Link>
-            <Link className="dropdown-item" to={"/categoria/Pelotas"} onClick={() => handleClick("Pelotas")}>pelotas</Link>
-            <Link className="dropdown-item" to={"/categoria/Grips"} onClick={() => handleClick("Grips")}>grips</Link>
-            <Link className="dropdown-item" to={"/categoria/Calcetines"} onClick={() => handleClick("Calcetines")}>calcetines</Link>
-            <Link className="dropdown-item" to={"/categoria/Protectores"} onClick={() => handleClick("Protectores")}>protectores</Link>
-            <Link className="dropdown-item" to={"/categoria/Palas"} onClick={() => handleClick("Palas")}>palas</Link>
+            <Link className="dropdown-item" to={"/"} onClick={() => handleClick("Todos")} >todos</Link>
+            <Link className="dropdown-item" to={"/categoria/Pelotas"} onClick={() => handleClick("Pelotas")} >pelotas</Link>
+            <Link className="dropdown-item" to={"/categoria/Grips"} onClick={() => handleClick("Grips")} >grips</Link>
+            <Link className="dropdown-item" to={"/categoria/Calcetines"} onClick={() => handleClick("Calcetines")} >calcetines</Link>
+            <Link className="dropdown-item" to={"/categoria/Protectores"} onClick={() => handleClick("Protectores")} >protectores</Link>
+            <Link className="dropdown-item" to={"/categoria/Palas"} onClick={() => handleClick("Palas")} >palas</Link>
         </ul>
     </div>
   )

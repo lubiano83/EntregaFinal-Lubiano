@@ -35,7 +35,7 @@ const ItemCount = ({stock, inicial, agregar}) => {
         </div>
         <div className="ItemCount__botones">
             <Link to={"/"}>
-            <Boton label="Volver" className="volver"/>
+            <Boton label="Volver"/>
             </Link>
             <Link>
                 <Boton handleClick={() => agregar(cantidad)} disabled={!stock} label="Agregar" />
