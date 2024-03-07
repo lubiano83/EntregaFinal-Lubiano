@@ -3,6 +3,7 @@
 import Boton from "./Boton";
 
 const Ingreso = () => {
+  
   return (
     <section className="mostrar-ingreso" id="Ingreso">
       <h3 className="IngresoTexto">Ingresa tus Datos:</h3>
@@ -12,7 +13,8 @@ const Ingreso = () => {
         <label htmlFor="inputPassword" className="col-sm-2 col-form-label">Password</label>
         <input type="password" className="form-control" id="inputPassword"/>
       </div>
-      <Boton label="Ingresa"/>
+      <Boton label="Salir" />
+      <Boton label="Ingresa" />
     </section>
   )
 }; export default Ingreso;
