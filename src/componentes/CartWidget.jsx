@@ -1,6 +1,7 @@
 /* CartWidget */
 
 import {useState, useEffect} from "react"
+import Carrito from "./Carrito";
 
 const CartWidget = ({numerito}) => {
 
@@ -22,8 +23,11 @@ const CartWidget = ({numerito}) => {
     // numerito = 99;
 
     return (
-        <button onClick={TOGGLE_CARRITO} className="rounded-circle"  id="CartWidget">
-            <span className="numerito">{numerito}</span>
-        </button>
+        <div id="CartWidget">
+            <button onClick={TOGGLE_CARRITO} className="rounded-circle CartWidget__boton" >
+                <span className="numerito">{numerito}</span>
+            </button>
+            <Carrito />
+        </div>
     )
 }; export default CartWidget;

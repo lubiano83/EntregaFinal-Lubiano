@@ -1,15 +1,15 @@
 /* Inicio */
 
-import Bienvenida from "./Bienvenida";
-import Entrar from "./Entrar";
-import Tools from "./Tools";
+import InicioTexto from "./InicioTexto";
+import InicioBoton from "./InicioBoton";
+import InicioTools from "./InicioTools";
 
 const Inicio = () => {
   return (
     <div id="Inicio">
-        <Tools />
-        <Entrar />
-        <Bienvenida />
+        <InicioTools />
+        <InicioBoton />
+        <InicioTexto />
     </div>
   )
 }; export default Inicio;

@@ -1,9 +1,9 @@
-/* Entrar */
+/* InicioBoton */
 
-#Entrar {
+#InicioBoton {
     position: absolute;
 
-    .Entrar__boton {
+    .InicioBoton__boton {
         background-color: transparent;
         color: map-get($colores, color-2);
         font-weight: bold;
