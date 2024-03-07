@@ -19,8 +19,8 @@ function App() {
   return (
     <BrowserRouter>
       <div id="App">
-        <Navbar categoriaDropdown={HANDLE_CATEGORIA}/>
         <Inicio />
+        <Navbar categoriaDropdown={HANDLE_CATEGORIA}/>
         <Routes>
           <Route path="/" element={ <ItemListContainer greeting={`Categoria: ${categoriaTitulo}`} /> } />
           <Route path="/categoria/:categoryId" element={ <ItemListContainer greeting={`Categoria: ${categoriaTitulo}`} /> } />
