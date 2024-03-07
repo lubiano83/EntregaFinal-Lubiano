@@ -5,8 +5,7 @@
     flex-flow: column  wrap;
     justify-content: center;
     align-items: center;
-    gap: 20px;
-    margin: 30px;
+    margin-bottom: 20px;
     .ItemCount__controles {
         display: flex;
         flex-flow: row wrap;
@@ -16,10 +15,10 @@
         .svg {
             width: 40px;
             height: 40px;
-            color: map-get($colores, color-2);
-            border: 1px solid map-get($colores, color-2);
+            color: map-get($colores, color-4);
+            border: 1px solid map-get($colores, color-4);
             border-radius: 10px;
-            background-color: map-get($colores, color-4);
+            background-color: map-get($colores, color-2);
             box-shadow: 2px 2px 2px map-get($colores, color-4);
             &:active {
                 scale: 1.1;
@@ -28,20 +27,7 @@
         .controles__numero {
             text-align: center;
             font-size: 26px;
-            color: map-get($colores, color-4);
-        }
-    }
-    .ItemCount__botones {
-        text-align: center;
-        width: 250px;
-    }
-    #Boton {
-        margin: 10px;
-        color: map-get($colores, color-2);
-        border: 1px solid map-get($colores, color-2);
-        background-color: map-get($colores, color-4);
-        &:active {
-            scale: 1.1;
+            color: map-get($colores, color-2);
         }
     }
 }
