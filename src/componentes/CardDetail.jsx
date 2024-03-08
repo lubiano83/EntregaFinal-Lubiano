@@ -1,6 +1,6 @@
 /* CardDetail */
 
-const CardDetail = ({img, id, categoria, marca, precio, stock, descripcion}) => {
+const CardDetail = ({img, id, categoria, modelo, marca, precio, stock, descripcion}) => {
 
   return (
     <div id="CardDetail">
@@ -10,6 +10,7 @@ const CardDetail = ({img, id, categoria, marca, precio, stock, descripcion}) => 
           <h4>Id: {id}</h4>
           <h4>Categoria: {categoria}</h4>
           <h4>Marca: {marca}</h4>
+          <h4>Modelo: {modelo}</h4>
           <h4>Precio: {precio}</h4>
           <h4>Stock: {stock}</h4>
         </div>

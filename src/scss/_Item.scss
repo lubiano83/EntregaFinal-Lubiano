@@ -12,4 +12,11 @@
     flex-flow: column wrap;
     justify-content: space-between;
     background-image: linear-gradient(to right, #2c73d2, #237bd7, #1983dc, #0d8ae0, #0392e4, #0392e4, #0392e4, #0392e4, #0d8ae0, #1983dc, #237bd7, #2c73d2);
+    .Item__boton {
+        text-align: center;
+        width: 100%;
+        #Boton {
+            margin-bottom: 20px;
+        }
+    }
 }
