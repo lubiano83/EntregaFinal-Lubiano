@@ -3,7 +3,7 @@
 .ItemDetail {
     background-color: map-get($colores, color-2);
     display: flex;
-    flex-flow: row-reverse wrap;
+    flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
     display: flex;
