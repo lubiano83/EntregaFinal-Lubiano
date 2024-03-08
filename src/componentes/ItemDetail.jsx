@@ -5,25 +5,28 @@ import Titulo from "./Titulo";
 import {Link} from "react-router-dom";
 import Boton from "./Boton";
 import ItemCount from "./ItemCount";
-import { useState } from "react";
+import { useContext } from "react";
+import { CartContext } from "../App";
+
 
 const ItemDetail = ({id, img, categoria, marca, modelo,  precio, stock, descripcion}) => {
 
-  const [cantidadAgregada, setCantidadAgregada] = useState(0);
+  const {addItem, isInCart} = useContext(CartContext);
 
   const handleAgregar = (cantidad) => {
-    setCantidadAgregada(cantidad)
+    const productObj = {id, marca, modelo, precio, cantidad}
+    addItem(productObj)
   }
 
   return (
     <article className="ItemDetail">
       <Titulo label="Detalle Producto:"/>
-      <CardDetail id={id} img={img} categoria={categoria} modelo={modelo} marca={marca} precio={precio} stock={stock} descripcion={descripcion}/>
+      <CardDetail id={id} img={img} categoria={categoria} modelo={modelo} marca={marca} precio={precio} stock={stock} descripcion={descripcion} />
       <div className="ItemDetail__contenedor">
         <Link to={"/"}>
             <Boton label="Volver"/>
         </Link>
-        { cantidadAgregada > 0 ? ( <Link to={"/carrito"}><Boton label="Carrito"/></Link> ) : ( <ItemCount inicial={1} stock={stock} agregar={handleAgregar} /> ) }
+        { isInCart(id) > 0 ? ( <Link to={"/carrito"}><Boton label="Carrito"/></Link> ) : ( <ItemCount inicial={1} stock={stock} agregar={handleAgregar} /> ) }
       </div>
     </article>
   )
