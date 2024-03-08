@@ -1,16 +1,14 @@
-/* useToggle */
+/* useToggle.js */
 
 import { useState } from "react";
 
-export const useToggle = () => {
+export const useToggle = (initialValue) => {
     
-    const [mostrarToggle, setMostrarToggle] = useState();
+    const [toggle, setToggle] = useState(initialValue);
 
-    const TOGGLE = () => {
-        setMostrarToggle(!mostrarToggle);
+    const toggleValue = () => {
+        setToggle(!toggle);
     };
 
-    return {mostrarToggle, TOGGLE}
+    return { toggle, toggleValue };
 };
-
-

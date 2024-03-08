@@ -9,4 +9,11 @@
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;  
+    .inicio__botones {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
 }

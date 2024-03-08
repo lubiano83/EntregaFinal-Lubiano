@@ -6,9 +6,6 @@
     flex-flow: row wrap;
     justify-content: space-evenly;
     align-items: center;
-    position: fixed;
-    top: 0;
-    z-index: 3;
     background-image: linear-gradient(to right, #2c73d2, #237bd7, #1983dc, #0d8ae0, #0392e4, #0392e4, #0392e4, #0392e4, #0d8ae0, #1983dc, #237bd7, #2c73d2);
     border-bottom: 1px solid map-get($colores, color-4);
     padding-bottom: 1px;

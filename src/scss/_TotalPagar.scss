@@ -1,13 +1,15 @@
 /* TotalPagar */
 
 #TotalPagar {
+
     .TotalPagar__total {
-        color: map-get($colores, color-2);
+        color: map-get($colores, color-4);
         text-align: center;
         margin-top: 30px;
+        font-weight: bold;
     }
     #Boton {
-        margin: 10px 30px 30px 30px;
+        margin: 10px 10px 30px 10px;
         text-align: center;
         line-height: 1.8;
     }

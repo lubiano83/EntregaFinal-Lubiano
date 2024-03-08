@@ -25,9 +25,9 @@ function App() {
           <Route path="/" element={ <ItemListContainer greeting={`Categoria: ${categoriaTitulo}`} /> } />
           <Route path="/categoria/:categoryId" element={ <ItemListContainer greeting={`Categoria: ${categoriaTitulo}`} /> } />
           <Route path="/detalle/:productId" element={ <ItemDetailContainer /> } />
+          <Route path="/carrito" element={ <Carrito /> } />
           <Route path="*" element={ <main><h1>¡404 Error, Not Found!</h1></main> } />
         </Routes>
-        <Carrito/> 
         <Footer/>
       </div>
     </BrowserRouter>
