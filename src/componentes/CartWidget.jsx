@@ -11,7 +11,7 @@ const CartWidget = () => {
         <Link id="CartWidget" to={"/carrito"}>
             <button className="rounded-circle CartWidget__boton" >
                 <span className="numerito">
-                    {totalQuantity}
+                    {(totalQuantity === 0 ? "" : totalQuantity)}
                 </span>
             </button>
         </Link>

@@ -2,19 +2,19 @@
 
 import Titulo from "./Titulo";
 import TotalPagar from "./TotalPagar";
-import Boton from "./Boton";
+import { useCart } from "../hooks/useCart";
+import CarritoItem from "./CarritoItem";
 
 const Carrito = () => {
+
+    const {cart} = useCart();
     
     return (
         <section id="Carrito">
             <Titulo label="Carrito de Compras:"/>
             <section id="carritoContenedor">
                 <article className="contenedor__card">
-                    <h4>Cantidad</h4>
-                    <h4>Categoria, Marca, Modelo.</h4>
-                    <h4>Precio</h4>
-                    <Boton label="Eliminar"/>
+                    { cart.map(p => <CarritoItem key={p.id} {...p} /> ) }
                 </article>
             </section>
             <TotalPagar />
