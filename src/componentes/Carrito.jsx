@@ -14,7 +14,7 @@ const Carrito = () => {
             <Titulo label="Carrito de Compras:"/>
             <section id="carritoContenedor">
                 <article className="contenedor__card">
-                    { cart.map(p => <CarritoItem key={p.id} {...p} /> ) }
+                    { cart.map(prod => <CarritoItem key={prod.id} {...prod} /> ) }
                 </article>
             </section>
             <TotalPagar />

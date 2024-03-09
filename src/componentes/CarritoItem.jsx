@@ -11,7 +11,7 @@ const CarritoItem = ({cantidad, categoria, marca, modelo, precio}) => {
     <div id="CarritoItem">
         <h4>{cantidad}</h4>
         <h4>{categoria}, {marca}, {modelo}.</h4>
-        <h4>{precio}</h4>
+        <h4>{precio * cantidad}</h4>
         <Boton label="Eliminar" handleClick={removeItem}/>
     </div>
   )
