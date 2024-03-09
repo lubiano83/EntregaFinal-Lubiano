@@ -5,16 +5,15 @@ import Titulo from "./Titulo";
 import {Link} from "react-router-dom";
 import Boton from "./Boton";
 import ItemCount from "./ItemCount";
-import { useContext } from "react";
-import { CartContext } from "../App";
+import { useCart } from "../context/CartContext";
 
 
 const ItemDetail = ({id, img, categoria, marca, modelo,  precio, stock, descripcion}) => {
 
-  const {addItem, isInCart} = useContext(CartContext);
+  const {addItem, isInCart} = useCart();
 
   const handleAgregar = (cantidad) => {
-    const productObj = {id, marca, modelo, precio, cantidad}
+    const productObj = {id, categoria, marca, modelo, precio, cantidad}
     addItem(productObj)
   }
 
