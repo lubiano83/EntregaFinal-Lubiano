@@ -7,8 +7,8 @@
     }
 }
 
-/* 320px & 469px */
-@include mobile(320px, 469px) {
+/* 0px & 469px */
+@include mobile(0px, 469px) {
     #Links {
         flex-flow: row wrap;
     }

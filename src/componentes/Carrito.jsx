@@ -2,6 +2,7 @@
 
 import Titulo from "./Titulo";
 import TotalPagar from "./TotalPagar";
+import Boton from "./Boton";
 
 const Carrito = () => {
     
@@ -9,7 +10,12 @@ const Carrito = () => {
         <section id="Carrito">
             <Titulo label="Carrito de Compras:"/>
             <section id="carritoContenedor">
-                {/* Esto se rellena automaticamente */}
+                <article className="contenedor__card">
+                    <h4>Cantidad</h4>
+                    <h4>Categoria, Marca, Modelo.</h4>
+                    <h4>Precio</h4>
+                    <Boton label="Eliminar"/>
+                </article>
             </section>
             <TotalPagar />
         </section>
