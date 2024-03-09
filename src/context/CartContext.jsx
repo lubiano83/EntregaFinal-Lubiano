@@ -1,6 +1,6 @@
 /* CartContext */
 
-import {useState, createContext, useContext} from "react";
+import {useState, createContext} from "react";
 
 export const CartContext = createContext();
 
@@ -29,13 +29,19 @@ export const CartProvider = ({children}) => {
         return cart.some(prod => prod.id === id)
     }
 
+    const getTotalQuantity = () => {
+        let accu = 0;
+        cart.forEach(prod => {
+            accu += prod.cantidad
+        })
+        return accu
+    }
+
+    const totalQuantity = getTotalQuantity();
+
     return (
-        <CartContext.Provider value={{cart, isInCart, addItem, removeItem, clearCart}}>
+        <CartContext.Provider value={{cart, isInCart, addItem, removeItem, clearCart, totalQuantity}}>
             {children}
         </CartContext.Provider>
     );
-};
-
-export const useCart = () => {
-    return useContext(CartContext);
 };

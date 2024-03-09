@@ -5,7 +5,7 @@ import Titulo from "./Titulo";
 import {Link} from "react-router-dom";
 import Boton from "./Boton";
 import ItemCount from "./ItemCount";
-import { useCart } from "../context/CartContext";
+import { useCart } from "../hooks/useCart";
 
 
 const ItemDetail = ({id, img, categoria, marca, modelo,  precio, stock, descripcion}) => {

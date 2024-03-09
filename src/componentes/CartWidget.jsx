@@ -1,15 +1,16 @@
 /* CartWidget */
 
 import { Link } from "react-router-dom";
+import { useCart } from "../hooks/useCart";
 
-const CartWidget = ({numerito}) => {
+const CartWidget = () => {
 
-    // numerito = 99;
+    const {totalQuantity} = useCart();
 
     return (
         <Link id="CartWidget" to={"/carrito"}>
             <button className="rounded-circle CartWidget__boton" >
-                <span className="numerito">{numerito}</span>
+                <span className="numerito">{totalQuantity}</span>
             </button>
         </Link>
     )
