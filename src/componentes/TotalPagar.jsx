@@ -2,19 +2,22 @@
 
 import Boton from "./Boton";
 import { Link } from "react-router-dom";
+import Total from "./Total";
+import { useCart } from "../hooks/useCart";
 
 const TotalPagar = () => {
+
+    const {sacarPrecioTotal} = useCart();
+
     return (
-        <>
-            <section id="TotalPagar">
-                <h5 className="TotalPagar__total">Total: $0</h5>
-                <Link to={"/"}>
-                    <Boton label="Volver"/>
-                </Link>
-                <Link>
-                    <Boton label="Pagar"/>
-                </Link>
-            </section>
-        </>
+        <section id="TotalPagar">
+            <Total label={`Total: $${sacarPrecioTotal()}`}/>
+            <Link to={"/"}>
+                <Boton label="Volver"/>
+            </Link>
+            <Link>
+                <Boton label="Pagar"/>
+            </Link>
+        </section>
     )
 }; export default TotalPagar;
