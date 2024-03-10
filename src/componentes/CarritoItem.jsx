@@ -5,7 +5,7 @@ import { useCart } from "../hooks/useCart";
 
 const CarritoItem = ({id, cantidad, categoria, marca, modelo, precio }) => {
 
-    const {removeItem} = useCart();
+    const {removeItem, formatearPrecio} = useCart();
 
     const totalItem = cantidad * precio
 
@@ -13,7 +13,7 @@ const CarritoItem = ({id, cantidad, categoria, marca, modelo, precio }) => {
     <div id="CarritoItem">
         <h4>{cantidad}</h4>
         <h4>{categoria}, {marca}, {modelo}.</h4>
-        <h4>${totalItem}</h4>
+        <h4>${formatearPrecio(totalItem)}</h4>
         <Boton label="Eliminar" handleClick={() => removeItem(id)}/>
     </div>
   )

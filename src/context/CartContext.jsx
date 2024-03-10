@@ -44,11 +44,21 @@ export const CartProvider = ({children}) => {
         cart.forEach(prod => {
             precioTotal += prod.cantidad * prod.precio;
         })
-        return precioTotal;
+        return formatearPrecio(precioTotal);
+    }
+
+    const formatearPrecio = (price) => {
+        const PRECIO_STRING = price.toString(); // Convertir el precio a string
+        const LONGITUD = PRECIO_STRING.length;
+        if (LONGITUD > 3) {
+            const PARTE_ENTERA = PRECIO_STRING.slice(0, LONGITUD - 3); // Obtener la parte entera del precio
+            const PARTE_DECIMAL = PRECIO_STRING.slice(LONGITUD - 3); // Obtener los últimos 3 dígitos como parte decimal
+            return `${PARTE_ENTERA}.${PARTE_DECIMAL}`; // Devolver el precio formateado con un punto después de los primeros 3 dígitos
+        }
     }
 
     return (
-        <CartContext.Provider value={{cart, isInCart, addItem, removeItem, clearCart, totalQuantity, sacarPrecioTotal}}>
+        <CartContext.Provider value={{cart, isInCart, addItem, removeItem, clearCart, totalQuantity, sacarPrecioTotal, formatearPrecio}}>
             {children}
         </CartContext.Provider>
     );
