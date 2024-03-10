@@ -12,4 +12,18 @@
     #Links {
         flex-flow: row wrap;
     }
+    #CarritoItem {
+        flex-flow: column nowrap;
+        gap: 10px;
+        text-align: center;
+    }
 }
+
+/* 470px & 906px */
+@include mobile(470px, 906px) {
+    #CarritoItem {
+        flex-flow: column nowrap;
+        gap: 10px;
+        text-align: center;
+    }
+}   
