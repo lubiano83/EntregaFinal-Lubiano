@@ -3,7 +3,7 @@
 import Boton from "./Boton";
 import { useCart } from "../hooks/useCart";
 
-const CarritoItem = ({cantidad, categoria, marca, modelo, precio}) => {
+const CarritoItem = ({id, cantidad, categoria, marca, modelo, precio }) => {
 
     const {removeItem} = useCart();
 
@@ -14,7 +14,7 @@ const CarritoItem = ({cantidad, categoria, marca, modelo, precio}) => {
         <h4>{cantidad}</h4>
         <h4>{categoria}, {marca}, {modelo}.</h4>
         <h4>{totalItem}</h4>
-        <Boton label="Eliminar" handleClick={removeItem}/>
+        <Boton label="Eliminar" handleClick={() => removeItem(id)}/>
     </div>
   )
 }; export default CarritoItem;

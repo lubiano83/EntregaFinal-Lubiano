@@ -36,7 +36,7 @@ const PRODUCTOS = [
       img: "./src/img/pelota-padel-m_m.webp",
       categoria: "Pelotas",
       marca: "M/M",
-      modelo: "Padel",
+      modelo: "Padel Pro",
       descripcion: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed reprehenderit placeat dolorum dicta provident quasi minima quibusdam. Quod repellendus error reiciendis eligendi odit culpa assumenda ratione vitae, recusandae quidem nulla.",
       stock: 50,
       precio: 5990,
@@ -86,7 +86,7 @@ const PRODUCTOS = [
 export const getProducts = () => {
     return new Promise((resolve) => {
         setTimeout(() => {
-            resolve(PRODUCTOS.reverse());
+            resolve(PRODUCTOS);
         },500)
     })
 }
