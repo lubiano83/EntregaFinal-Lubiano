@@ -9,6 +9,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Carrito from "./componentes/Carrito";
 import Inicio from "./componentes/Inicio";
 import { CartProvider } from "./context/CartContext";
+import Checkout from "./componentes/Checkout";
 
 function App() {
   const [categoriaTitulo, setCategoriaTitulo] = useState("Todos");
@@ -29,6 +30,7 @@ function App() {
           <Route path="/categoria/:categoryId" element={ <ItemListContainer greeting={`Categoria: ${categoriaTitulo}`} /> } />
           <Route path="/detalle/:productId" element={ <ItemDetailContainer /> } />
           <Route path="/carrito" element={ <Carrito /> } />
+          <Route path="/datos" element={ <Checkout /> } />
           <Route path="*" element={ <main><h1>¡404 Error, Not Found!</h1></main> } />
         </Routes>
         </CartProvider>

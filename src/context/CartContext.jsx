@@ -50,7 +50,9 @@ export const CartProvider = ({children}) => {
     const formatearPrecio = (price) => {
         const PRECIO_STRING = price.toString(); // Convertir el precio a string
         const LONGITUD = PRECIO_STRING.length;
-        if (LONGITUD > 3) {
+        if (LONGITUD <= 3) {
+            return PRECIO_STRING; // Si el precio tiene 3 o menos dígitos, devuelve el precio sin modificar
+        } else {
             const PARTE_ENTERA = PRECIO_STRING.slice(0, LONGITUD - 3); // Obtener la parte entera del precio
             const PARTE_DECIMAL = PRECIO_STRING.slice(LONGITUD - 3); // Obtener los últimos 3 dígitos como parte decimal
             return `${PARTE_ENTERA}.${PARTE_DECIMAL}`; // Devolver el precio formateado con un punto después de los primeros 3 dígitos
