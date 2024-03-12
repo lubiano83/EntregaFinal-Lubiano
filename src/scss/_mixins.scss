@@ -2,7 +2,7 @@
 
 @mixin botones($color, $background-color, $valor-text-align, $borde) {
     background-color: $background-color;
-    border: 1px solid $borde;
+    border: 2px solid $borde;
     color: $color;
     height: 40px;
     width: 90px;
@@ -17,6 +17,6 @@
     &:active {
         background-color: map-get($colores, color-4);
         color: map-get($colores, color-2);
-        border: 1px solid map-get($colores, color-2);
+        border: 2px solid map-get($colores, color-2);
     }
 }

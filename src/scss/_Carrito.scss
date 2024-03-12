@@ -12,6 +12,7 @@
         color: map-get($colores, color-2);
         border: 2px solid map-get($colores, color-2);
         box-shadow: 2px 2px 2px map-get($colores, color-4);
+        margin-bottom: 30px;
         &:active {
             scale: 1.1;
         }

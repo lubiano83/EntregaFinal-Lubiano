@@ -4,10 +4,23 @@ import Titulo from "./Titulo";
 import TotalPagar from "./TotalPagar";
 import { useCart } from "../hooks/useCart";
 import CarritoItem from "./CarritoItem";
+import Boton from "./Boton";
+import { Link } from "react-router-dom";
 
 const Carrito = () => {
 
-    const {cart} = useCart();
+    const {cart, totalQuantity} = useCart();
+
+    if(totalQuantity === 0) {
+        return (
+            <section id="Carrito">
+                <Titulo label="¡No hay Productos en Carrito!"/>
+                <Link to={"/"} className="Carrito__Volver">
+                    <Boton id="Volver" label="Volver"/>
+                </Link>
+            </section>
+        )
+    }
     
     return (
         <section id="Carrito">
