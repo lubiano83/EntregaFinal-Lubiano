@@ -59,7 +59,6 @@ export const CartProvider = ({children}) => {
                 resultado = '.' + resultado;
             }
         }
-    
         return resultado;
     }
 
@@ -69,3 +68,4 @@ export const CartProvider = ({children}) => {
         </CartContext.Provider>
     );
 };
+
