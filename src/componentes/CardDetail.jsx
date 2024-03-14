@@ -2,8 +2,6 @@
 
 const CardDetail = ({img, id, categoria, modelo, marca, precio, stock, descripcion}) => {
 
-  console.log(img)
-
   return (
     <div id="CardDetail">
       <div className="CardDetail__contenedor">

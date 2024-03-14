@@ -2,7 +2,7 @@
 
 const InicioBoton = () => {
   return (
-    <a id="InicioBoton" href="http://localhost:5173/#ItemListContainer">
+    <a href="http://localhost:5173/#ItemListContainer" id="InicioBoton">
         <button className="InicioBoton__boton">Ir a la Tienda</button>
     </a>
   )

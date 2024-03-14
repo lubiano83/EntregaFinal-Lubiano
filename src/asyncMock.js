@@ -3,7 +3,7 @@
 const PRODUCTOS = [
     {
       id: "1",
-      img: "./src/img/calcetin-nox-negro-rojo.webp",
+      img: "/src/img/calcetin-nox-negro-rojo.webp",
       categoria: "Calcetines",
       marca: "Nox",
       modelo: "Negro-Rojo",
@@ -13,7 +13,7 @@ const PRODUCTOS = [
     },
     {
       id: "2",
-      img: "./src/img/grip-wilson.webp",
+      img: "/src/img/grip-wilson.webp",
       categoria: "Grips",
       marca: "Wilson",
       modelo: "Blanco",
@@ -23,7 +23,7 @@ const PRODUCTOS = [
     },
     {
       id: "3",
-      img: "./src/img/pala-nox.webp",
+      img: "/src/img/pala-nox.webp",
       categoria: "Palas",
       marca: "Nox",
       modelo: "ML10 Pro Cup Luxury",
@@ -33,7 +33,7 @@ const PRODUCTOS = [
     },
     {
       id: "4",
-      img: "./src/img/pelota-padel-m_m.webp",
+      img: "/src/img/pelota-padel-m_m.webp",
       categoria: "Pelotas",
       marca: "M/M",
       modelo: "Padel Pro",
@@ -43,7 +43,7 @@ const PRODUCTOS = [
     },
     {
       id: "5",
-      img: "./src/img/protector-nox.webp",
+      img: "/src/img/protector-nox.webp",
       categoria: "Protectores",
       marca: "Nox",
       modelo: "Ventus Verde-Negro",
@@ -53,7 +53,7 @@ const PRODUCTOS = [
     },
     {
       id: "6",
-      img: "./src/img/grip-wilson-rosado.webp",
+      img: "/src/img/grip-wilson-rosado.webp",
       categoria: "Grips",
       marca: "Wilson",
       modelo: "Rosado",
@@ -63,7 +63,7 @@ const PRODUCTOS = [
     },
     {
       id: "7",
-      img: "./src/img/protector-nox-axul.webp",
+      img: "/src/img/protector-nox-axul.webp",
       categoria: "Protectores",
       marca: "Nox",
       modelo: "Ventus Azul-Celeste",
@@ -73,7 +73,7 @@ const PRODUCTOS = [
     },
     {
       id: "8",
-      img: "./src/img/calcetin-nox-negro-blanco.webp",
+      img: "/src/img/calcetin-nox-negro-blanco.webp",
       categoria: "Calcetines",
       marca: "Nox",
       modelo: "Negro-Blanco",
