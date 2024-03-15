@@ -13,8 +13,8 @@ const Carrito = () => {
 
     if(totalQuantity === 0) {
         return (
-            <section id="Carrito">
-                <Titulo label="¡No hay Productos en Carrito!"/>
+            <section id="nuevoCarrito">
+                <Titulo label="Carrito sin Productos..."/>
                 <Link to={"/"} className="Carrito__Volver">
                     <Boton id="Volver" label="Volver"/>
                 </Link>

@@ -20,7 +20,7 @@ const ItemDetail = ({id, img, categoria, marca, modelo,  precio, stock, descripc
   return (
     <article className="ItemDetail">
       <Titulo label="Detalle Producto:"/>
-      <CardDetail id={id} img={img} categoria={categoria} modelo={modelo} marca={marca} precio={precio} stock={stock} descripcion={descripcion} />
+      <CardDetail id={id} img={img} categoria={categoria} modelo={modelo} marca={marca} precio={precio} stock={stock} descripcion={descripcion}/>
       <div className="ItemDetail__contenedor">
         <Link to={"/"}>
             <Boton label="Volver"/>

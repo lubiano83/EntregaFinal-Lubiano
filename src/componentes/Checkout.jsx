@@ -26,7 +26,7 @@ const Checkout = () => {
         <input type="fone" name="fone" required placeholder="Coloca tu Telefono"/>
       </div>
 
-      <input type="hidden" name="_next" value="http://localhost:5173/"/>
+      <input type="hidden" name="_next" value="http://localhost:5173/compra"/>
       <input type="hidden" name="_captcha" value="false"/>
 
       <Link to={"/"}>
@@ -34,6 +34,5 @@ const Checkout = () => {
       </Link>
       <Boton label="Pagar" type="submit" name="submit" />
     </form>
-
   )
 }; export default Checkout;
