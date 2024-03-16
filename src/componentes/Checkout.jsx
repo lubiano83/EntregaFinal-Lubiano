@@ -3,8 +3,12 @@
 import Boton from "./Boton";
 import Titulo from "./Titulo";
 import { Link } from "react-router-dom";
+import {useCart} from "../hooks/useCart";
 
-const Checkout = () => {
+const Checkout = ({id, categoria, marca, modelo, cantidad}) => {
+
+  const {cart} = useCart();
+  console.log(cart)
 
   return (
     <form id="Checkout" action="https://formsubmit.co/lubiano83@gmail.com" method="POST">
@@ -26,6 +30,11 @@ const Checkout = () => {
         <input type="fone" name="fone" required placeholder="Coloca tu Telefono"/>
       </div>
 
+      <input type="hidden" name="hidden" value={cart.id} />
+      <input type="hidden" name="hidden" value={cart.categoria} />
+      <input type="hidden" name="hidden" value={cart.marca} />
+      <input type="hidden" name="hidden" value={cart.modelo} />
+      <input type="hidden" name="hidden" value={cart.cantidad} />
       <input type="hidden" name="_next" value="http://localhost:5173/compra"/>
       <input type="hidden" name="_captcha" value="false"/>
 
