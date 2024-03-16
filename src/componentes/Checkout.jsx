@@ -1,14 +1,14 @@
 /* Checkout */
 
 import Boton from "./Boton";
+import CheckoutItem from "./CheckoutItem";
 import Titulo from "./Titulo";
 import { Link } from "react-router-dom";
-import {useCart} from "../hooks/useCart";
+import { useCart } from "../hooks/useCart";
 
-const Checkout = ({id, categoria, marca, modelo, cantidad}) => {
+const Checkout = () => {
 
   const {cart} = useCart();
-  console.log(cart)
 
   return (
     <form id="Checkout" action="https://formsubmit.co/lubiano83@gmail.com" method="POST">
@@ -27,21 +27,18 @@ const Checkout = ({id, categoria, marca, modelo, cantidad}) => {
       </div>
       <div className="barra">
         <label htmlFor="">Telefono</label>
-        <input type="fone" name="fone" required placeholder="Coloca tu Telefono"/>
+        <input type="phone" name="phone" required placeholder="Coloca tu Telefono"/>
       </div>
 
-      <input type="hidden" name="hidden" value={cart.id} />
-      <input type="hidden" name="hidden" value={cart.categoria} />
-      <input type="hidden" name="hidden" value={cart.marca} />
-      <input type="hidden" name="hidden" value={cart.modelo} />
-      <input type="hidden" name="hidden" value={cart.cantidad} />
+      { cart.map(prod => <CheckoutItem key={prod.id} {...prod} /> ) }
       <input type="hidden" name="_next" value="http://localhost:5173/compra"/>
       <input type="hidden" name="_captcha" value="false"/>
 
+     
       <Link to={"/"}>
         <Boton label="Volver"/>
       </Link>
-      <Boton label="Pagar" type="submit" name="submit" />
+      <Boton label="Pagar" type="submit" name="submit"/>
     </form>
   )
 }; export default Checkout;

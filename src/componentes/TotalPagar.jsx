@@ -15,8 +15,8 @@ const TotalPagar = () => {
             <Link to={"/"}>
                 <Boton label="Volver"/>
             </Link>
-            <Link to={"/datos"}>
-                <Boton label="Checkout"/>
+            <Link to={"/datos"} >
+                <Boton label="Checkout" />
             </Link>
         </section>
     )
