@@ -1,6 +1,10 @@
 /* CardDetail */
 
+import { useCart } from "../hooks/useCart";
+
 const CardDetail = ({img, id, categoria, modelo, marca, precio, stock, descripcion}) => {
+
+  const {formatearPrecio} = useCart(id);
 
   return (
     <div id="CardDetail">
@@ -11,7 +15,7 @@ const CardDetail = ({img, id, categoria, modelo, marca, precio, stock, descripci
           <h4>Categoria: {categoria}</h4>
           <h4>Marca: {marca}</h4>
           <h4>Modelo: {modelo}</h4>
-          <h4>Precio: ${precio}</h4>
+          <h4>Precio: ${id && formatearPrecio(precio)}</h4>
           <h4>Stock: {stock}</h4>
         </div>
       </div>

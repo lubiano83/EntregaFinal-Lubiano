@@ -23,7 +23,7 @@ const ItemDetail = ({id, img, categoria, marca, modelo,  precio, stock, descripc
       <CardDetail id={id} img={img} categoria={categoria} modelo={modelo} marca={marca} precio={precio} stock={stock} descripcion={descripcion}/>
       <div className="ItemDetail__contenedor">
         <Link to={"/"}>
-            <Boton label="Volver"/>
+          <Boton label="Volver"/>
         </Link>
         { isInCart(id) > 0 ? ( <Link to={"/carrito"}><Boton label="Carrito"/></Link> ) : ( <ItemCount inicial={1} stock={stock} agregar={handleAgregar} /> ) }
       </div>
