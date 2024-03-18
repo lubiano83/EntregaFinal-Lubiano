@@ -5,14 +5,16 @@ import CheckoutItem from "./CheckoutItem";
 import Titulo from "./Titulo";
 import { Link } from "react-router-dom";
 import { useCart } from "../hooks/useCart";
+import {useMostrar} from "../hooks/useMostrar";
 
 const Checkout = () => {
 
   const {cart} = useCart();
+  const {mostrar, handleMostrar} = useMostrar(false);
 
   return (
     <form id="Checkout" action="https://formsubmit.co/lubiano83@gmail.com" method="POST">
-      <Titulo label="Datos de Envio:"/>
+      { mostrar ? <Titulo label="¡La compra se esta Confirmando!" /> : <Titulo label="Datos de Envio:"/> }
       <div className="barra">
         <label htmlFor="">Nombre</label>
         <input type="name" name="name" required placeholder="Coloca tu Nombre"/>
@@ -29,16 +31,16 @@ const Checkout = () => {
         <label htmlFor="">Telefono</label>
         <input type="phone" name="phone" required placeholder="Coloca tu Telefono"/>
       </div>
-
+      
       { cart.map(prod => <CheckoutItem key={prod.id} {...prod} /> ) }
+      
       <input type="hidden" name="_next" value="http://localhost:5173/compra"/>
       <input type="hidden" name="_captcha" value="false"/>
-
      
       <Link to={"/"}>
-        <Boton label="Volver"/>
+        <Boton label="Volver" />
       </Link>
-      <Boton label="Pagar" type="submit" name="submit"/>
+      <Boton label="Pagar" type="submit" name="submit" handleClick={handleMostrar} />
     </form>
   )
 }; export default Checkout;
