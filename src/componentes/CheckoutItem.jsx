@@ -6,7 +6,7 @@ const CheckoutItem = ({id, cantidad}) => {
 
   return (
     <article id="CheckoutItem">
-        <input type={`producto(${id})`} name={`producto(${id})`} readOnly value={`Cantidad: ${cantidad}.`}/>
+        <input type={`Id: ${id}`} name={`Id: ${id}`} readOnly value={`Cantidad: ${cantidad}.`}/>
     </article>
   )
 }; export default CheckoutItem;

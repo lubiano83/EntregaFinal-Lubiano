@@ -1,10 +1,11 @@
 /* ItemListContainer */
 
 import { useState, useEffect} from "react";
-import { getProducts, getProductsByCategory } from "../asyncMock";
 import ItemList from "./ItemList";
 import Titulo from "./Titulo";
 import { useParams } from "react-router-dom";
+import { db } from "../Firebase/firebase";
+import { collection, getDocs, query, where } from "firebase/firestore";
 
 const ItemListContainer = ({ greeting }) => {
     const [productos, setProductos] = useState([]);
@@ -13,10 +14,13 @@ const ItemListContainer = ({ greeting }) => {
 
     useEffect(() => {
         setLoading(true)
-        const asyncFunc = categoryId ? getProductsByCategory : getProducts;
-        asyncFunc(categoryId)
-            .then(respuesta => {
-                setProductos(respuesta);
+        const collectionRef = categoryId ? query(collection(db, "PRODUCTOS"), where("categoria", "==", categoryId)) : collection(db, "PRODUCTOS");
+        getDocs(collectionRef) // nos sirve para obtener los documentos
+            .then((respuesta) => {
+                const PRODUCTOS = respuesta.docs.map((doc) => {
+                    return {id: doc.id, ...doc.data()}
+                })
+                setProductos(PRODUCTOS)
             })
             .catch(error => {
                 console.error(error);

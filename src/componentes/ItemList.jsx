@@ -1,8 +1,11 @@
 /* ItemList */
 
 import Item from "./Item";
+import { memo } from "react";
 
 const ItemList = ({ productos }) => {
+    console.log("render")
+
     return (
         <div id="ItemList">
             {
@@ -14,4 +17,4 @@ const ItemList = ({ productos }) => {
             }
         </div>
     )
-}; export default ItemList;
+}; export default memo(ItemList);
