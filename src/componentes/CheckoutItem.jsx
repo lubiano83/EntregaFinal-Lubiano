@@ -1,8 +1,8 @@
 /* CheckoutItem */
 
-const CheckoutItem = ({id, cantidad}) => {
 
-    console.log(id, cantidad)
+
+const CheckoutItem = ({id, cantidad}) => {
 
   return (
     <article id="CheckoutItem">
