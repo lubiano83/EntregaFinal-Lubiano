@@ -7,7 +7,6 @@ import ItemDetailContainer from "./componentes/ItemDetailContainer";
 import Footer from "./componentes/Footer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Carrito from "./componentes/Carrito";
-import Inicio from "./componentes/Inicio";
 import { CartProvider } from "./context/CartContext";
 import Checkout from "./componentes/Checkout";
 import CompraRealizada from "./componentes/CompraRealizada";
@@ -22,12 +21,11 @@ function App() {
   return (
     <BrowserRouter>
       <div id="App">
-        <Inicio />
         <CartProvider>
-          <Navbar categoriaDropdown={HANDLE_CATEGORIA}/>
+          <Navbar categoriaDropdown={HANDLE_CATEGORIA} />
           <Routes>
             <Route path="/" element={ <ItemListContainer greeting={`Categoria: Todos`} /> } />
-            <Route path="/categoria/:categoryId" element={ <ItemListContainer greeting = {`Categoria: ${categoriaTitulo}`}/>} />
+            <Route path="/categoria/:categoryId" element={ <ItemListContainer greeting = {`Categoria: ${categoriaTitulo}`} /> } />
             <Route path="/detalle/:productId" element={ <ItemDetailContainer /> } />
             <Route path="/carrito" element={ <Carrito /> } />
             <Route path="/datos" element={ <Checkout /> } /> 
