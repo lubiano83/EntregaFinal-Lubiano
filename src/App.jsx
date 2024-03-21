@@ -10,6 +10,7 @@ import Carrito from "./componentes/Carrito";
 import { CartProvider } from "./context/CartContext";
 import Checkout from "./componentes/Checkout";
 import CompraRealizada from "./componentes/CompraRealizada";
+import Inicio from "./componentes/Inicio";
 
 function App() {
   const [categoriaTitulo, setCategoriaTitulo] = useState("Todos");
@@ -22,6 +23,7 @@ function App() {
     <BrowserRouter>
       <div id="App">
         <CartProvider>
+          <Inicio />
           <Navbar categoriaDropdown={HANDLE_CATEGORIA} />
           <Routes>
             <Route path="/" element={ <ItemListContainer greeting={`Categoria: Todos`} /> } />
