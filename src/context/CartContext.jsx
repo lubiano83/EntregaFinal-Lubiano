@@ -6,7 +6,6 @@ export const CartContext = createContext();
 
 export const CartProvider = ({children}) => {
     const [cart, setCart] = useState([]);
-    const [order, setOrder] = useState(0);
 
     const addItem = (productToAdd) => {
         if(!isInCart(productToAdd.id)) {
@@ -36,7 +35,7 @@ export const CartProvider = ({children}) => {
         })
         return accu
     }
-
+    
     const totalQuantity = getTotalQuantity();
 
     const sacarPrecioTotal = () => {
@@ -62,13 +61,8 @@ export const CartProvider = ({children}) => {
         return resultado;
     }
 
-    const generarNumeroDeOrden = () => {
-        clearCart();
-        return setOrder(Math.random()*10000000000000000)
-      }
-
     return (
-        <CartContext.Provider value={{cart, isInCart, addItem, removeItem, clearCart, totalQuantity, sacarPrecioTotal, formatearPrecio, generarNumeroDeOrden, order}}>
+        <CartContext.Provider value={{cart, isInCart, addItem, removeItem, clearCart, totalQuantity, sacarPrecioTotal, formatearPrecio}}>
             {children}
         </CartContext.Provider>
     );

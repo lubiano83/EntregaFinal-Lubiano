@@ -13,8 +13,9 @@ import CompraRealizada from "./componentes/CompraRealizada";
 import Inicio from "./componentes/Inicio";
 
 function App() {
-  const [categoriaTitulo, setCategoriaTitulo] = useState("Todos");
 
+  const [categoriaTitulo, setCategoriaTitulo] = useState("Todos");
+ 
   const HANDLE_CATEGORIA = (categoria) => { // Función para manejar la categoría seleccionada
     setCategoriaTitulo(categoria);
   };
