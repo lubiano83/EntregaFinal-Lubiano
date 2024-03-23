@@ -18,7 +18,7 @@ const Checkout = () => {
   }
 
   if(orderCreated){
-    return <CompraRealizada label={`Numero de Orden: ${newOrderId}`} />
+    return <CompraRealizada label={`Orden de Compra: ${newOrderId}`} />
   }
 
   return (
