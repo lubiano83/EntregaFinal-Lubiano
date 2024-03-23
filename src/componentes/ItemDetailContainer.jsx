@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Titulo from "./Titulo";
 import { doc, getDoc } from "firebase/firestore";
-import { db } from "../Firebase/firebase";
+import { db } from "../services";
  
 const ItemDetailContainer = () => {
 
@@ -35,5 +35,3 @@ const ItemDetailContainer = () => {
     </section>
   )
 }; export default ItemDetailContainer;
-
-

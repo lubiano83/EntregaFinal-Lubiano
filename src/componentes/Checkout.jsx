@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useCart } from "../hooks/useCart";
 import { writeBatch, collection, documentId, getDocs, query, where, addDoc } from "firebase/firestore";
-import { db } from "../Firebase/firebase";
+import { db } from "../services";
 import Boton from "./Boton";
 import { Link } from "react-router-dom";
 import Titulo from "./Titulo";
