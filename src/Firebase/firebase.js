@@ -4,12 +4,12 @@ import { initializeApp } from "firebase/app";
 import {getFirestore} from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDH_VPNhW46yZQx1QfawidlIJwAAr6hAgY",
-  authDomain: "padel-store-5ede4.firebaseapp.com",
+  apiKey: import.meta.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: import.meta.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
   projectId: "padel-store-5ede4",
-  storageBucket: "padel-store-5ede4.appspot.com",
-  messagingSenderId: "61236125376",
-  appId: "1:61236125376:web:db49043906d83d1c0cd725"
+  storageBucket: import.meta.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.REACT_APP_FIREBASE_APP_ID
 };
 
 const app = initializeApp(firebaseConfig); // Initialize Firebase
