@@ -1,41 +1,36 @@
 /* ItemListContainer */
 
-import { useState, useEffect} from "react";
 import ItemList from "./ItemList";
 import Titulo from "./Titulo";
+import { useAsync } from "../hooks/useAsync";
+import { getProducts } from "../services/firebase";
 import { useParams } from "react-router-dom";
-import { db } from "../services";
-import { collection, getDocs, query, where } from "firebase/firestore";
+import CargandoPagina from "./CargandoPagina";
 
 const ItemListContainer = ({ greeting }) => {
-    const [productos, setProductos] = useState([]);
     const { categoryId } = useParams();
-    const [loading, setLoading] = useState(false);
 
-    useEffect(() => {
-        setLoading(true)
-        const collectionRef = categoryId ? query(collection(db, "PRODUCTOS"), where("categoria", "==", categoryId)) : collection(db, "PRODUCTOS");
-        getDocs(collectionRef) // nos sirve para obtener los documentos
-            .then((respuesta) => {
-                const PRODUCTOS = respuesta.docs.map((doc) => {
-                    return {id: doc.id, ...doc.data()}
-                })
-                setProductos(PRODUCTOS)
-            })
-            .catch(error => {
-                console.error(error);
-            })
-            .finally(() => {
-                setLoading(false)
-            })
-    }, [categoryId]);
+    // Mueve la declaración de getProductFromFirestore antes de su uso en useAsync
+    const getProductFromFirestore = () => getProducts(categoryId);
+    const { data, error, isLoading } = useAsync(getProductFromFirestore, [categoryId]);
 
-    console.log(productos); // Verifica si los productos se cargan correctamente.
+    if (error) {
+        return <Titulo label="Hubo un Error..." />;
+    }
+
+    if (!data) {
+        return <CargandoPagina />;
+    }
+
+    if (data.length === 0) {
+        return categoryId ? <Titulo label={`No hay productos en nuestra categoria ${categoryId}`} /> : <Titulo label="No hay productos disponibles..." />;
+    }
 
     return (
         <main id="ItemListContainer">
-           {loading ? <Titulo label="Cargando Productos..."/> : <Titulo label={greeting}/>}
-            <ItemList productos={productos} />
+            {isLoading ? <Titulo label="Cargando Productos..." /> : <Titulo label={greeting} />}
+            <ItemList productos={data} />
         </main>
-    )
-}; export default ItemListContainer;
+    );
+};
+export default ItemListContainer;
