@@ -18,14 +18,14 @@ const Inicio = ({login}) => {
   return (
     <div id="Inicio">
         <InicioTools handleClick={handleMostrar}/>
-        <Titulo label={login}/>
+        {<Titulo label={login}/>}
         <div className="inicio__botones">
           <Logo />
           <InicioBoton />
           <InicioContacto />
         </div>
         <InicioTexto />
-        {mostrar === true && <Ingreso /> }
+        {mostrar && <Ingreso /> }
     </div>
   )
 }; export default Inicio;
