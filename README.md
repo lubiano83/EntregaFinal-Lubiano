@@ -15,3 +15,7 @@ Firebase: Utilizamos Firebase para gestionar el backend de la aplicación. Esto 
 
 React Router: Utilizamos React Router para manejar la navegación dentro de la aplicación y permitir la navegación entre diferentes páginas de manera fluida.
 Bootstrap: Utilizamos Bootstrap como biblioteca de componentes de React para garantizar una interfaz de usuario elegante y consistente.
+
+/* Link */
+
+https://660093fd071f0624ad61ab4c--reliable-strudel-ca872e.netlify.app/#
