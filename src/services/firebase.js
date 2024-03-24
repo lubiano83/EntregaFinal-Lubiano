@@ -6,6 +6,7 @@ import { createProductFromFirestore } from "../adapters/productAdapter";
 
 export const getProducts = (categoryId) => {
     const collectionRef = !categoryId ? collection(db, "PRODUCTOS") : query(collection(db, "PRODUCTOS"), where("categoria", "==", categoryId));
+    
 
     return getDocs(collectionRef)
         .then((respuesta) => {
