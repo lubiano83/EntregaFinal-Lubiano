@@ -8,6 +8,7 @@
     text-align: center;
     .input, .textarea {
         text-align: center;
+        box-shadow: 2px 2px 2px map-get($colores, color-4);
     }
     .textarea {
         height: 125px;
