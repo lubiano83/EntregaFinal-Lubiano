@@ -1,11 +1,17 @@
 /* CargandoPagina */
 
+import Footer from "./Footer";
+import Navbar from "./Navbar";
 import Titulo from "./Titulo";
 
 const CargandoPagina = () => {
   return (
-    <div id="CargandoPagina">
-        <Titulo label="Cargando la Pagina..."/>
-    </div>
+    <>
+      <Navbar />
+      <div id="CargandoPagina">
+          <Titulo label="Cargando la Pagina..."/>
+      </div>
+      <Footer />
+    </>
   )
 }; export default CargandoPagina;

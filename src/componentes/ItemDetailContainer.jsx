@@ -6,6 +6,8 @@ import { useParams } from "react-router-dom";
 import Titulo from "./Titulo";
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "../services";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
  
 const ItemDetailContainer = () => {
 
@@ -30,8 +32,12 @@ const ItemDetailContainer = () => {
   }, [productId]);
 
   return (
-    <section id="ItemDetailContainer">
-      {loading ? <Titulo label="Cargando Producto..."/> : <ItemDetail {...producto}/>}
-    </section>
+    <>
+      <Navbar />
+      <section id="ItemDetailContainer">
+        {loading ? <Titulo label="Cargando Producto..."/> : <ItemDetail {...producto}/>}
+      </section>
+      <Footer />
+    </>
   )
 }; export default ItemDetailContainer;

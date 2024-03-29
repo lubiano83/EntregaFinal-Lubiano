@@ -1,5 +1,6 @@
 /* Formulario */
 
+import { Link } from "react-router-dom";
 import Boton from "./Boton"
 
 const Formulario = ({Reset, Enviar}) => {
@@ -17,6 +18,9 @@ const Formulario = ({Reset, Enviar}) => {
             </label>
             <textarea className="form-control textarea" id="exampleFormControlTextarea1" rows="3" placeholder="Deja tu Mensaje"></textarea>
         </div>
+        <Link to={"/"}>
+            <Boton label="Volver"/>
+        </Link>
         <Boton label={Reset} className="reset boton"/>
         <Boton label={Enviar} className="enviar boton"/>
     </div>

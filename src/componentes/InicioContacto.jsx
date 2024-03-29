@@ -1,9 +1,11 @@
 /* InicioContacto */
 
+import { Link } from "react-router-dom";
+
 const InicioContacto = () => {
   return (
-    <a id="InicioContacto" href="#Footer">
+    <Link id="InicioContacto" to={"/contacto"}>
         <button className="InicioContacto__boton">Contactanos</button>
-    </a>
+    </Link>
   )
 }; export default InicioContacto;

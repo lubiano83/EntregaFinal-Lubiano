@@ -1,9 +1,11 @@
 /* Entrar */
 
+import { Link } from "react-router-dom";
+
 const InicioBoton = () => {
   return (
-    <a href="#ItemListContainer" id="InicioBoton">
+    <Link to={"/tienda"} id="InicioBoton">
         <button className="InicioBoton__boton">Ir a la Tienda</button>
-    </a>
+    </Link>
   )
 }; export default InicioBoton;

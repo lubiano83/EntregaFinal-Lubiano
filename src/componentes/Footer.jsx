@@ -1,14 +1,14 @@
 /* Footer */
 
-import Formulario from "./Formulario";
 import Horario from "./Horario";
 import Links from "./Links";
+import Logo from "./Logo";
 
 const Footer = () => {
   return (
     <footer id="Footer">
-        <Formulario Reset="Reset" Enviar="Enviar"/>
         <Links/>
+        <Logo />
         <Horario/>
     </footer>
   )

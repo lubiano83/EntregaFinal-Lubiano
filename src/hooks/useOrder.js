@@ -4,19 +4,46 @@ import { useState } from "react";
 import { writeBatch, collection, documentId, getDocs, query, where, addDoc } from "firebase/firestore";
 import { db } from "../services";
 import { useCart } from "./useCart";
-import { useBuyer } from "./useBuyer";
 
 export const useOrder = () => {
 
     const [loading, setLoading] = useState(false);
-    const {cart, clearCart } = useCart();
-    const {objOrder} = useBuyer();
+    const {cart, clearCart, totalQuantity, sacarPrecioTotal } = useCart();
     const [orderCreated, setOrderCreated] = useState(false);
     const [newOrderId, setNewOrderId] = useState(null);
+    const total = sacarPrecioTotal();
+
+    const [buyerInfo, setBuyerInfo] = useState({
+        name: "",
+        mail: "",
+        address: "",
+        phone: ""
+      });
+    
+      const handleInputChange = (type, value) => {
+        setBuyerInfo({
+          ...buyerInfo,
+          [type]: value
+        });
+      };
   
     const createOrder = async () => {
         setLoading(true)
         try{
+
+          const objOrder = {
+            buyer: {
+              Nombre: buyerInfo.name,
+              mail: buyerInfo.mail,
+              address: buyerInfo.address,
+              phone: buyerInfo.phone
+            },
+            item: cart,
+            totalQuantity,
+            total,
+            date: new Date()
+          }; 
+
           const ids = cart.map((item) => item.id);
           const productRef = collection(db, "PRODUCTOS");
           const productsAddedFromFirestore = await getDocs(
@@ -44,6 +71,7 @@ export const useOrder = () => {
               await batch.commit();
               const orderRef = collection(db, "orders");
               const orderAdded = addDoc(orderRef, objOrder);
+              console.log(objOrder)
               const orderId = (await orderAdded).id;
               console.log(`El Id de su Orden es: ${orderId}`);
               setNewOrderId(orderId)
@@ -59,5 +87,5 @@ export const useOrder = () => {
         }
       }
 
-    return {createOrder, loading, orderCreated, newOrderId}
+    return {createOrder, loading, orderCreated, newOrderId, handleInputChange}
 }

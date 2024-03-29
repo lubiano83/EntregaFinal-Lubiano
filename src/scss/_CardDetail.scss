@@ -29,7 +29,9 @@
         }
     }
     .contenedor__descripcion {
-        width: 40%;
+        margin: 0px 30px 0px 30px;
+        max-width: 1000px;
+        width: 80%;
         text-align: justify;
         color: map-get($colores, color-4);
         min-width: 300px;

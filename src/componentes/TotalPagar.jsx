@@ -12,7 +12,7 @@ const TotalPagar = () => {
     return (
         <section id="TotalPagar">
             <Total label={`Total: $${sacarPrecioTotal()}`}/>
-            <Link to={"/"}>
+            <Link to={"/tienda"}>
                 <Boton label="Volver"/>
             </Link>
             <Link to={"/datos"} >
