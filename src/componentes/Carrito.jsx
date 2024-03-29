@@ -19,7 +19,7 @@ const Carrito = () => {
              <Navbar />
             <section id="nuevoCarrito">
                 <Titulo label="Carrito sin Productos..."/>
-                <Link to={"/"} className="Carrito__Volver">
+                <Link to={"/tienda"} className="Carrito__Volver">
                     <Boton id="Volver" label="Volver"/>
                 </Link>
             </section>
