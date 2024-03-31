@@ -9,51 +9,60 @@
 
 /* 0px & 433px */
 @include mobile(0px, 433px) {
-    #Links {
-        flex-flow: row wrap;
-    }
     #CarritoItem {
         flex-flow: column nowrap;
         gap: 10px;
         text-align: center;
     }
-    #Horario {
-        margin: 30px;
+    #Footer {
+        flex-flow: column-reverse wrap;
+        #Logo {
+            margin: 30px 30px -20px 30px;
+        }
+        #Links {
+            margin: -10px 30px 30px 30px;
+        }
     }
 }
 
 /* 0px & 481px */
 @include mobile(434px, 481px) {
-    #Links {
-        flex-flow: row wrap;
-    }
     #CarritoItem {
         flex-flow: column nowrap;
         gap: 10px;
         text-align: center;
     }
-    #Horario {
-        margin: 0px 30px 30px 30px;
+    #Footer {
+        flex-flow: column-reverse wrap;
+        #Logo {
+            margin: 30px 30px -20px 30px;
+        }
+        #Links {
+            margin: -10px 30px 30px 30px;
+        }
     }
 }
 
-/* 482px & 715px */
-@include mobile(482px, 715px) {
-    #Links {
-        flex-flow: row wrap;
-    }
+/* 482px & 850px */
+@include mobile(482px, 850px) {
     #CarritoItem {
         flex-flow: column nowrap;
         gap: 10px;
         text-align: center;
     }
-    #Horario {
-        margin: 0px 30px 30px 30px;
+    #Footer {
+        flex-flow: column-reverse wrap;
+        #Logo {
+            margin: 30px 30px -20px 30px;
+        }
+        #Links {
+            margin: -10px 30px 30px 30px;
+        }
     }
 }
 
-/* 716px & 906px */
-@include mobile(716px, 906px) {
+/* 851px & 906px */
+@include mobile(851px, 906px) {
     #CarritoItem {
         flex-flow: column nowrap;
         gap: 10px;

@@ -8,8 +8,8 @@ const Footer = () => {
   return (
     <footer id="Footer">
         <Links/>
-        <Logo />
         <Horario/>
+        <Logo />
     </footer>
   )
 }; export default Footer;
