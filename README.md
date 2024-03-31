@@ -18,5 +18,5 @@ Bootstrap: Utilizamos Bootstrap como biblioteca de componentes de React para gar
 
 /* Link */
 
-https://6608b34ebd201656da78b5b9--rainbow-boba-f44cbe.netlify.app/
+https://padel-store.netlify.app/
 # Padel-Store
