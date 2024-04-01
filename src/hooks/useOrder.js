@@ -33,7 +33,7 @@ export const useOrder = () => {
 
           const objOrder = {
             buyer: {
-              Nombre: buyerInfo.name,
+              name: buyerInfo.name,
               mail: buyerInfo.mail,
               address: buyerInfo.address,
               phone: buyerInfo.phone

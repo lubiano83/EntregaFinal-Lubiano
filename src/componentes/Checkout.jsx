@@ -26,10 +26,10 @@ const Checkout = () => {
           <Navbar />
           <section id="Checkout">
             <Titulo label="Datos de Envio:"/>
-            <CheckoutItem type="name" name="name" label="Ingrese su Nombre" handleInputChange={handleInputChange} />
-            <CheckoutItem type="mail" name="mail" label="Ingrese su Mail" handleInputChange={handleInputChange} />
-            <CheckoutItem type="address" name="address" label="Ingrese su Dirección" handleInputChange={handleInputChange} />
-            <CheckoutItem type="phone" name="phone" label="Ingrese su Telefono" handleInputChange={handleInputChange} />
+            <CheckoutItem type="name" name="Nombre" label="Ingrese su Nombre" handleInputChange={handleInputChange} />
+            <CheckoutItem type="mail" name="Email" label="Ingrese su Mail" handleInputChange={handleInputChange} />
+            <CheckoutItem type="address" name="Dirección" label="Ingrese su Dirección" handleInputChange={handleInputChange} />
+            <CheckoutItem type="phone" name="Telefono" label="Ingrese su Telefono" handleInputChange={handleInputChange} />
 
               <div className="CheckoutItem__botones">
                 <Link to={"/tienda"}>
