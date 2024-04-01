@@ -1,5 +1,3 @@
-# React + Vite
-
 Tienda de Pádel - Proyecto de React + Vite con Firebase
 ¡Bienvenido/a a la tienda de pádel! Este proyecto es una aplicación web desarrollada en React que simula una tienda en línea para artículos relacionados con el pádel. La aplicación utiliza Firebase como backend para gestionar la base de datos, la autenticación de usuarios (proximamente) y el almacenamiento de archivos.
 
