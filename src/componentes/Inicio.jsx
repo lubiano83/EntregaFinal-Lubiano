@@ -6,26 +6,26 @@ import InicioTools from "./InicioTools";
 import InicioContacto from "./InicioContacto";
 import Ingreso from "./Ingreso";
 import Logo from "./Logo";
-import Titulo from "./Titulo";
 import { useMostrar } from "../hooks/useMostrar";
+import { useLogin } from "../hooks/useLogin";
+import ModalAdm from "./ModalAdm";
 
-const Inicio = ({login}) => {
+const Inicio = () => {
 
-  login = "José Pablo Lubiano"
-
-  const {handleMostrar, mostrar} = useMostrar();
+  const { handleMostrar, mostrar } = useMostrar();
+  const { email, setEmail, password, setPassword, handleLogin, isLoggedIn } = useLogin();
 
   return (
     <div id="Inicio">
         <InicioTools handleClick={handleMostrar}/>
-        {<Titulo label={login}/>}
         <div className="inicio__botones">
           <Logo />
           <InicioBoton />
           <InicioContacto />
         </div>
         <InicioTexto />
-        {mostrar && <Ingreso /> }
+        { mostrar && <Ingreso email={email} setEmail={setEmail} password={password} setPassword={setPassword} handleLogin={handleLogin}/> }
+        { isLoggedIn && <ModalAdm handleMostrar={handleMostrar}/> }
     </div>
   )
 }; export default Inicio;

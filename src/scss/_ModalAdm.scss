@@ -1,0 +1,22 @@
+/* ModalAdm */
+
+#ModalAdm {
+    background-color: map-get($colores, color-2);
+    position: absolute;
+    z-index: 4;
+    width: calc( 100vw - 60px);
+    height: calc( 100vh - 60px );
+    border-radius: 20px;
+    border: 2px solid map-get($colores, color-4);
+    #Titulo {
+        padding: 30px;
+    }
+    .svg {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        color: map-get($colores, color-4);
+        height: 40px;
+        width: 40px;
+    }
+}

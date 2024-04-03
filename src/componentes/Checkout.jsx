@@ -24,7 +24,7 @@ const Checkout = () => {
   return (
         <>
           <Navbar />
-          <section id="Checkout">
+          <form id="Checkout">
             <Titulo label="Datos de Envio:"/>
             <CheckoutItem type="name" name="Nombre:" label="Ingrese su Nombre" handleInputChange={handleInputChange} />
             <CheckoutItem type="mail" name="Email:" label="Ingrese su Mail" handleInputChange={handleInputChange} />
@@ -37,7 +37,7 @@ const Checkout = () => {
                 </Link>
                 <Boton label="Pagar" type="submit" name="submit" handleClick={createOrder} />
               </div>
-          </section>
+          </form>
           <Footer />
         </>
   )

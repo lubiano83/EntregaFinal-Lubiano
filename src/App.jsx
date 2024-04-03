@@ -9,6 +9,7 @@ import Checkout from "./componentes/Checkout";
 import CompraRealizada from "./componentes/CompraRealizada";
 import Inicio from "./componentes/Inicio";
 import Contacto from "./componentes/Contacto";
+import ModalAdm from "./componentes/ModalAdm";
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
         <CartProvider>
           <Routes>
             <Route path="/" element={ <Inicio /> } />
+            <Route path="/administracion" element={ <ModalAdm /> } />
             <Route path="/tienda" element={ <ItemListContainer /> } />
             <Route path="/categoria/:categoryId" element={ <ItemListContainer /> } />
             <Route path="/detalle/:productId" element={ <ItemDetailContainer /> } />

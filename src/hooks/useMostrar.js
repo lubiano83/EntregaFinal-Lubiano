@@ -10,6 +10,6 @@ export const useMostrar = () => {
         setMostrar(!mostrar);
     };
 
-    return {handleMostrar, mostrar}
+    return {handleMostrar, mostrar};
 };
 
