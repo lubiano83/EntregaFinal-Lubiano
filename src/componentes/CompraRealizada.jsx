@@ -1,3 +1,5 @@
+/* CompraRealizada */
+
 import Boton from "./Boton";
 import Footer from "./Footer";
 import Navbar from "./Navbar";

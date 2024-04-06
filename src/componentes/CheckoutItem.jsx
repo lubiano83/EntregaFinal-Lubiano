@@ -15,9 +15,9 @@ const CheckoutItem = ({type, name, label, handleInputChange}) => {
   console.log(inputValue);
 
   return (
-    <form id="CheckoutItem">
+    <div id="CheckoutItem">
         <label htmlFor="mail">{name}</label>
-        <input type={type} name={name} placeholder={label} onChange={handleChange} required value={inputValue}/>
-    </form>
+        <input type={type} name={name} placeholder={label} onChange={handleChange} required value={inputValue} />
+    </div>
   )
 }; export default CheckoutItem;
