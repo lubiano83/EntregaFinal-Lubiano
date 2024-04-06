@@ -44,6 +44,8 @@ export const useOrder = () => {
             date: new Date()
           }; 
 
+          console.log(objOrder)
+
           const ids = cart.map((item) => item.id);
           const productRef = collection(db, "PRODUCTOS");
           const productsAddedFromFirestore = await getDocs(
@@ -87,5 +89,5 @@ export const useOrder = () => {
         }
       }
 
-    return {createOrder, loading, orderCreated, newOrderId, handleInputChange}
+    return {createOrder, loading, orderCreated, newOrderId, handleInputChange, buyerInfo }
 }

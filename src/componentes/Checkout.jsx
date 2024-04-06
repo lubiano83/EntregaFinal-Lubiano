@@ -11,7 +11,7 @@ import Footer from "./Footer";
 
 const Checkout = () => {
 
-  const {createOrder, loading, orderCreated, newOrderId, handleInputChange} = useOrder();
+  const {createOrder, loading, orderCreated, newOrderId, handleInputChange, buyerInfo} = useOrder();
 
   if(loading){
     return <CompraRealizada label="Se esta generando su Orden..." />
@@ -26,16 +26,16 @@ const Checkout = () => {
           <Navbar />
           <form id="Checkout">
             <Titulo label="Datos de Envio:"/>
-            <CheckoutItem type="name" name="Nombre:" label="Ingrese su Nombre" handleInputChange={handleInputChange} />
-            <CheckoutItem type="mail" name="Email:" label="Ingrese su Mail" handleInputChange={handleInputChange} />
-            <CheckoutItem type="address" name="Dirección:" label="Ingrese su Dirección" handleInputChange={handleInputChange} />
-            <CheckoutItem type="phone" name="Telefono:" label="Ingrese su Telefono" handleInputChange={handleInputChange} />
+            <CheckoutItem type="name" name="Nombre:" label="Ingrese su Nombre" handleInputChange={handleInputChange} require/>
+            <CheckoutItem type="mail" name="Email:" label="Ingrese su Mail" handleInputChange={handleInputChange} require/>
+            <CheckoutItem type="address" name="Dirección:" label="Ingrese su Dirección" handleInputChange={handleInputChange} require/>
+            <CheckoutItem type="phone" name="Telefono:" label="Ingrese su Telefono" handleInputChange={handleInputChange} require/>
 
               <div className="CheckoutItem__botones">
                 <Link to={"/tienda"}>
                   <Boton label="Volver" />
                 </Link>
-                <Boton label="Pagar" type="submit" name="submit" handleClick={createOrder} />
+                { buyerInfo.name && buyerInfo.address && buyerInfo.mail && buyerInfo.phone && <Boton label="Pagar" type="submit" name="submit" handleClick={createOrder} />}
               </div>
           </form>
           <Footer />

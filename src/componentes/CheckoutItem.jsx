@@ -12,8 +12,6 @@ const CheckoutItem = ({type, name, label, handleInputChange}) => {
     handleInputChange(type, value); // Llama a la función de devolución de llamada con el tipo y el valor del input
   };
 
-  console.log(inputValue);
-
   return (
     <div id="CheckoutItem">
         <label htmlFor="mail">{name}</label>
