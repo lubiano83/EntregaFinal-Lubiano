@@ -24,8 +24,8 @@ const Inicio = () => {
           <InicioContacto />
         </div>
         <InicioTexto />
-        { mostrar && <Ingreso email={email} setEmail={setEmail} password={password} setPassword={setPassword} handleLogin={handleLogin}/> }
-        { isLoggedIn && <ModalAdm handleMostrar={handleMostrar}/> }
+        { mostrar && <Ingreso email={email} setEmail={setEmail} password={password} setPassword={setPassword} handleLogin={handleLogin} /> }
+        { isLoggedIn && <ModalAdm handleMostrar={handleMostrar} email={email} /> }
     </div>
   )
 }; export default Inicio;

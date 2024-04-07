@@ -23,6 +23,9 @@
             margin: -10px 30px 30px 30px;
         }
     }
+    #ModalAdm, #Ingreso {
+        display: none;
+    }
 }
 
 /* 0px & 481px */
@@ -40,6 +43,9 @@
         #Links {
             margin: -10px 30px 30px 30px;
         }
+    }
+    #ModalAdm, #Ingreso {
+        display: none;
     }
 }
 
@@ -59,6 +65,9 @@
             margin: -10px 30px 30px 30px;
         }
     }
+    #ModalAdm, #Ingreso {
+        display: none;
+    }
 }
 
 /* 851px & 906px */
@@ -67,5 +76,15 @@
         flex-flow: column nowrap;
         gap: 10px;
         text-align: center;
+    }
+    #ModalAdm, #Ingreso {
+        display: none;
+    }
+}   
+
+/* 907px & 1200px */
+@include mobile(907px, 1200px) {
+    #ModalAdm, #Ingreso {
+        display: none;
     }
 }   

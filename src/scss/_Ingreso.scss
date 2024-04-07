@@ -15,7 +15,16 @@
         margin: 30px 30px 20px 30px;
     }
     .formulario {
-        margin: 0px 30px 0px 30px;  
+        margin: 0px 30px 0px 30px;
+        #email {
+            text-align: center;
+            margin-bottom: 20px;
+            box-shadow: 2px 2px 2px map-get($colores, color-4);
+        }
+        #password {
+            text-align: center;
+            box-shadow: 2px 2px 2px map-get($colores, color-4);
+        }
     }
     #Boton {
         margin: 10px 10px 30px 10px;
